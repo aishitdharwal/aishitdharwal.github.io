@@ -635,6 +635,71 @@
                 padding: 2rem 1rem;
             }
         }
+        /* About Me Section */
+        .about-me-section {
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .about-me-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 3rem;
+            border: 1px solid rgba(255, 69, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .about-me-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-me-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #FF4500;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .about-me-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-me-content {
+            text-align: center;
+        }
+
+        .about-me-content h3 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #FF4500;
+            margin-bottom: 0.5rem;
+        }
+
+        .about-me-content p {
+            font-size: 1.1rem;
+            color: #F5F5F5;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 1.5rem auto;
+        }
+
+        /* Adjustments for responsiveness */
+        @media (max-width: 768px) {
+            .about-me-card {
+                padding: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -731,6 +796,21 @@
                         </div>
                     </div>
                 </div>
+                
+                <section class="section about-me-section">
+                    <h2>👩‍💻 About Your Instructor</h2>
+                    <div class="about-me-card">
+                        <div class="profile-pic about-me-pic">
+                             <img src="images/aishit.jpeg" alt="Aishit Dharwal" />
+                        </div>
+                        <div class="about-me-content">
+                            <h3>Aishit Dharwal</h3>
+                            <p>My name is Aishit, and my personal identity has always been rooted in a love for teaching. After graduating from IIT Bombay, where I first discovered my passion for machine learning, I began a career applying AI in practical, high-stakes environments. I’ve worked on everything from an AI-driven math equation solver to developing AI for financial institutions like <b>Piramal Capital and IDFC First Bank</b>, using <b>computer vision</b> to enhance lending and creditworthiness assessments. Currently, I'm the <b>Head of AI</b> at a mental wellness company called Skooc, where I continue to apply my skills to a new and important domain.</p>
+                            <p>My teaching journey has grown alongside my professional one, starting with mentoring colleagues and expanding to platforms like <b>100x Engineers and Airtribe</b>. I love the challenge of adapting complex concepts, like the math behind AI, for different audiences—whether it's someone with decades of <b>corporate experience</b> or a university student. This course is a direct reflection of that passion: to make complex, production-ready AI knowledge accessible and interactive for everyone.</p>
+                            <a href="https://www.linkedin.com/in/aishit-dharwal/" target="_blank" class="linkedin-badge">📍 View My LinkedIn Profile</a>
+                        </div>
+                    </div>
+                </section>
 
                 <section class="section testimonials-section">
                     <h2>💬 What Industry Leaders Say</h2>
