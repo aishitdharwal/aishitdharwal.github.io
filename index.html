@@ -372,6 +372,179 @@
             box-shadow: 0 15px 40px rgba(255, 69, 0, 0.4);
         }
 
+        /* Testimonials Section */
+        .testimonials-section {
+            margin: 4rem 0;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .testimonial {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 2rem;
+            border-left: 4px solid #FF4500;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: 0.5rem;
+            left: 1rem;
+            font-size: 4rem;
+            color: rgba(255, 69, 0, 0.2);
+            font-family: 'Times New Roman', serif;
+            line-height: 1;
+        }
+
+        .testimonial:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .testimonial-content {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .testimonial-content p {
+            /* font-style: italic; */
+            line-height: 1.7;
+            color: #F5F5F5;
+            margin-top: 1rem;
+        }
+
+        .testimonial-author {
+            border-top: 1px solid rgba(255, 69, 0, 0.2);
+            padding-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1rem;
+        }
+
+        .profile-pic {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #FF4500, #FF6A33);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+            font-weight: 900;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3);
+            margin-bottom: 0.5rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .author-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .author-info h4 {
+            color: #FF4500;
+            font-weight: 900;
+            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .author-info p {
+            color: #F5F5F5;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.8;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        .linkedin-badge {
+            display: inline-block;
+            background: rgba(255, 69, 0, 0.2);
+            color: #FF4500;
+            padding: 0.3rem 1rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-align: center;
+            margin-top: 0.2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .linkedin-badge:hover {
+            background: rgba(255, 69, 0, 0.3);
+            transform: scale(1.05);
+            text-decoration: none;
+            color: #FF4500;
+        }
+
+        .profile-pic {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #FF4500, #FF6A33);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+            font-weight: 900;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3);
+            margin-bottom: 0.5rem;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .profile-pic.has-image {
+            font-size: 0;
+            background-image: url('https://via.placeholder.com/60x60/FF4500/FFFFFF?text=PS');
+        }
+
+        .view-more-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #FF4500, #FF6A33);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 69, 0, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
         /* Animations */
         @keyframes slideInUp {
             from {
@@ -559,9 +732,113 @@
                     </div>
                 </div>
 
+                <section class="section testimonials-section">
+                    <h2>💬 What Industry Leaders Say</h2>
+                    <div class="testimonials-grid">
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                <p>"Learning from Aishit... was a <b>game-changer</b>. What makes him stand out is his ability to <b>connect</b>. He doesn't just lecture; he <b>actively engages</b>, figures out exactly where you're stuck, and then explains concepts with <b>incredible clarity and patience</b>. Every session, from the basics to <b>advanced deployment strategies</b>, was packed with "aha!" moments.
+
+                                    Beyond the code and the tech, Aishit genuinely cares about shaping how you think about <b>AI responsibly</b>. His <b>mentorship was pivotal</b> for me, and I can't recommend him highly enough. If you get the chance to learn from Aishit, take it."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="profile-pic"><img src="images/jay.jpeg" alt="Jay Jhaveri" /></div>
+                                <div class="author-info">
+                                    <h4>Jay Jhaveri</h4>
+                                    <p>Senior Software Engineer</p>
+                                    <a href="https://www.linkedin.com/in/jhaverijay/" target="_blank" class="linkedin-badge">📍 LinkedIn</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                <p>"Aishit has a rare ability to <b>break dense, technical topics down to their smallest parts</b>, explaining the why and the how, fielding every question, and bringing it all together into a <b>clear mental model that sticks</b>. Aishit is the <b>human version of Notebook LM</b>. He makes <b>spot on analogies</b> that make complex concepts click for anyone, regardless of domain. He has <b>deep expertise across the AI stack</b> and he pairs that with <b>sharp business judgement</b>. When required, he also graciously offers to open his network to move things forward. <b>Smart, kind, and an absolute pleasure to learn from</b>. If you get the chance to learn from or work with Aishit, take it, you will always come out ahead."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="profile-pic"><img src="images/ashni.jpeg" alt="Ashni Shah" /></div>
+                                <div class="author-info">
+                                    <h4>Ashni Shah</h4>
+                                    <p>Strategy & Operations</p>
+                                    <a href="https://www.linkedin.com/in/ashnishah1000/" target="_blank" class="linkedin-badge">📍 LinkedIn</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                <p>"Aishit was an <b>exceptional mentor</b> who possesses a <b>remarkable ability to simplify complex topics</b>, making them easily digestible. His expertise in explaining <b>intricate concepts like Lang-chain and RAG workflows and chunking</b> is truly impressive. Under his guidance, I witnessed <b>significant growth in my understanding of AI</b> and technology, and my <b>confidence soared</b>. One of Aishit's standout qualities is his <b>unwavering support and availability</b> - whenever I reached out for help, he was always there, readily accessible via Google Meet. He not only provided <b>valuable insights into AI concepts</b> but also offered <b>expert advice on navigating job prospects in the AI world</b> and implementing practical solutions. I'm deeply grateful for Aishit's <b>mentorship</b>."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="profile-pic"><img src="images/anas.jpeg" alt="Anas Khan" /></div>
+                                <div class="author-info">
+                                    <h4>Anas Khan</h4>
+                                    <p>Technical Business Analyst</p>
+                                    <a href="https://www.linkedin.com/in/anas-khan-l/" target="_blank" class="linkedin-badge">📍 LinkedIn</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                <p>"I highly recommend Aishit for his <b>exceptional competence in data science</b>. Aishit's <b>breadth of knowledge</b>, spanning <b>deep learning algorithms, transformers, LSTM networks, deploying and operationalizing models, large language models, and model validation metrics</b>, is truly impressive. His <b>practical insights and industry use case studies</b> make him an outstanding person in the field. Aishit's dedication to <b>staying updated with the latest advancements in data science</b> ensures he would be a great choice to hire for anyone seeking <b>expertise in this dynamic domain</b>."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="profile-pic"><img src="images/dharmender.jpeg" alt="Dharmender Singh" /></div>
+                                <div class="author-info">
+                                    <h4>Dharmender Singh</h4>
+                                    <p>Leader at Fidelity</p>
+                                    <a href="https://www.linkedin.com/in/dhsinghnavish/" target="_blank" class="linkedin-badge">📍 LinkedIn</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                <p>"It's a pleasure to recommend Aishit! He was an <b>incredible mentor</b> to me as I navigated the exciting (and sometimes daunting) world of AI and job hunting within this field.
+
+                                    Aishit has a <b>knack for breaking down complex AI concepts into understandable pieces</b>. He didn't just lecture; he <b>fostered a genuine understanding</b>, patiently answering my many questions and always encouraging me to dig deeper. What truly set him apart was his <b>practical approach to career targeting</b>. He provided <b>invaluable guidance on tailoring my resume, crafting compelling cover letters, and even acing those tricky AI-focused interviews</b>.
+                                    Thanks to Aishit's <b>mentorship</b>, I felt much more confident and prepared as I pursued opportunities in AI. He has a <b>genuine passion for the field</b> and a <b>real gift for helping others succeed</b>. Anyone looking to build their AI skills and land their dream job in this space would be incredibly lucky to have Aishit as a mentor. I wholeheartedly recommend him!"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="profile-pic"><img src="images/krina.jpeg" alt="Krina Trivedi" /></div>
+                                <div class="author-info">
+                                    <h4>Krina Trivedi</h4>
+                                    <p>Product Manager</p>
+                                    <a href="https://www.linkedin.com/in/krina-trivedi/" target="_blank" class="linkedin-badge">📍 LinkedIn</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                <p>"Aishit brings a <b>wealth of practical experience to his teaching</b>, drawing from his extensive background in data science and AI. His <b>passion for the subject matter is contagious</b>, and he has a <b>natural talent for keeping students engaged</b> while covering technical material.
+                                    
+                                    I particularly appreciated how he <b>encouraged questions and fostered an interactive learning environment</b>. His <b>real-world examples and practical insights</b> made the learning experience both valuable and memorable.
+                                    
+                                    If you're looking to learn about AI, machine learning, or data science, I highly recommend learning from Aishit. His <b>teaching style combines technical expertise with clear communication</b>, making him an <b>exceptional educator</b>."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="profile-pic"><img src="images/subhash.jpeg" alt="Subhash Dasyam" /></div>
+                                <div class="author-info">
+                                    <h4>Subhash Dasyam</h4>
+                                    <p>Lead Security Architect</p>
+                                    <a href="https://www.linkedin.com/in/subhashdasyam/" target="_blank" class="linkedin-badge">📍 LinkedIn</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="view-more-testimonials">
+                        <a href="https://www.linkedin.com/in/aishit-dharwal/details/recommendations/?detailScreenTabIndex=0" target="_blank" class="view-more-link">
+                            🔍 View More Testimonials on LinkedIn
+                        </a>
+                    </div>
+                </section>
+
                 <section class="pricing">
                     <div class="pricing-content">
-                        <div class="early-bird-badge">🔥 Pitch Night Special - Tonight Only!</div>
+                        <div class="early-bird-badge">🔥 Python Workshop Special - Tonight Only!</div>
                         <div class="price">
                             <span class="original-price">₹24,999</span>
                             <span class="discounted-price">₹19,999</span>
