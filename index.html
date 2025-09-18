@@ -290,6 +290,88 @@
             60% { transform: translateY(-5px); }
         }
 
+
+        .pain-points-section {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 4rem 0;
+            border: 1px solid rgba(203, 213, 224, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        
+        .pain-points-section h2 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #2d3748 0%, #e53e3e 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .pain-points-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .pain-points-list li {
+            background: #fff;
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: left;
+            border: 1px solid rgba(203, 213, 224, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pain-points-list li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .pain-points-list li::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(135deg, rgba(229, 62, 62, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .pain-points-list li:hover::before {
+            opacity: 1;
+        }
+        
+        .pain-point-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .pain-points-list h3 {
+            font-size: 1.2rem;
+            font-weight: 900;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pain-points-list p {
+            font-size: 1rem;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
         .price {
             font-size: 3rem;
             font-weight: 900;
@@ -356,7 +438,7 @@
         }
 
         .razorpay-payment-button {
-            background: linear-gradient(135deg, #ffffff, #ffffff) !important;
+            background: linear-gradient(135deg, #2d3748, #4a5568) !important;
             color: #ffffff !important;
             border: none !important;
             padding: 1rem 3rem !important;
@@ -725,6 +807,31 @@
     <main>
         <div class="container">
             <div class="main-content">
+                <section class="pain-points-section">
+                    <h2>🚨 Frustrated by the AI Hype Cycle?</h2>
+                    <p style="color: #4a5568; max-width: 800px; margin: 0 auto 2rem auto;">
+                        We're tired of the endless promises and fluffy demos, too. This program cuts through the noise and focuses on what actually works.
+                    </p>
+                    <ul class="pain-points-list">
+                        <li>
+                            <span class="pain-point-icon">🔮</span>
+                            <h3>Too Much Theory, Not Enough Practice</h3>
+                            <p>You've seen all the tutorials. But how do you go from a cool demo to a real-world, scalable product? We bridge the gap.</p>
+                        </li>
+                        <li>
+                            <span class="pain-point-icon">💸</span>
+                            <h3>Getting Burnt by Black-Box Models</h3>
+                            <p>Relying on expensive, opaque APIs leaves you vulnerable. We show you how to take control of your AI strategy.</p>
+                        </li>
+                        <li>
+                            <span class="pain-point-icon">⚖️</span>
+                            <h3>Unsure About AI Ethics and Regulation</h3>
+                            <p>AI isn't just a technical challenge—it's a legal and ethical one. We prepare you to navigate the risks and build responsibly.</p>
+                        </li>
+                    </ul>
+                </section>
+
+
                 <section class="section">
                     <h2>🚀 Industry-Focused Curriculum</h2>
                     <div class="course-outline">
