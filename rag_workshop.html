@@ -60,7 +60,7 @@
             display: flex;
             align-items: center;
             gap: 1.5rem;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
         }
         
         .banner-title {
@@ -77,7 +77,7 @@
         }
 
         .sticky-banner .razorpay-payment-button {
-            background: linear-gradient(135deg, #2d3748, #4a5568) !important;
+            background: linear-gradient(135deg, #ffffff, #ffffff) !important;
             color: #ffffff !important;
             border: none !important;
             padding: 0.5rem 2rem !important;
@@ -128,7 +128,7 @@
             padding: 2rem 0;
             position: relative;
             z-index: 10;
-            padding-top: 5rem; /* Add space for the sticky banner */
+            padding-top: 5rem;
         }
 
         .hero {
@@ -403,7 +403,7 @@
         }
 
         .razorpay-payment-button {
-            background: linear-gradient(135deg, #2d3748, #4a5568) !important;
+            background: linear-gradient(135deg, #ffffff, #ffffff) !important;
             color: #ffffff !important;
             border: none !important;
             padding: 1rem 3rem !important;
@@ -711,25 +711,27 @@
             }
         }
 
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 15px;
+        /* Mobile-specific fixes for the sticky banner */
+        @media (max-width: 600px) {
+            .sticky-banner-content {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
             }
-
-            .hero {
-                padding: 2rem 0 1rem 0;
+            
+            .banner-details {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.25rem;
             }
-
-            .hero h1 {
-                font-size: 2rem;
+            
+            .banner-title, .banner-info {
+                font-size: 0.9rem;
+                text-align: center;
             }
-
-            .main-content {
-                padding: 1.5rem 1rem;
-            }
-
-            .pricing {
-                padding: 2rem 1rem;
+            
+            header {
+                padding-top: 8rem; /* Increase padding to account for the taller banner */
             }
         }
     </style>
@@ -830,7 +832,6 @@
                         <div class="testimonial">
                             <div class="testimonial-content">
                                 <p>"Learning from Aishit... was a <b>game-changer</b>. What makes him stand out is his ability to <b>connect</b>. He doesn't just lecture; he <b>actively engages</b>, figures out exactly where you're stuck, and then explains concepts with <b>incredible clarity and patience</b>. Every session, from the basics to <b>advanced deployment strategies</b>, was packed with "aha!" moments.
-
                                     Beyond the code and the tech, Aishit genuinely cares about shaping how you think about <b>AI responsibly</b>. His <b>mentorship was pivotal</b> for me, and I can't recommend him highly enough. If you get the chance to learn from Aishit, take it."</p>
                             </div>
                             <div class="testimonial-author">
@@ -902,7 +903,6 @@
                         <div class="testimonial">
                             <div class="testimonial-content">
                                 <p>"It's a pleasure to recommend Aishit! He was an <b>incredible mentor</b> to me as I navigated the exciting (and sometimes daunting) world of AI and job hunting within this field.
-
                                     Aishit has a <b>knack for breaking down complex AI concepts into understandable pieces</b>. He didn't just lecture; he <b>fostered a genuine understanding</b>, patiently answering my many questions and always encouraging me to dig deeper. What truly set him apart was his <b>practical approach to career targeting</b>. Thanks to Aishit's <b>mentorship</b>, I felt much more confident and prepared as I pursued opportunities in AI. He has a <b>genuine passion for the field</b> and a <b>real gift for helping others succeed</b>. Anyone looking to build their AI skills and land their dream job in this space would be incredibly lucky to have Aishit as a mentor. I wholeheartedly recommend him!"</p>
                             </div>
                             <div class="testimonial-author">
@@ -918,9 +918,7 @@
                         <div class="testimonial">
                             <div class="testimonial-content">
                                 <p>"Aishit brings a <b>wealth of practical experience to his teaching</b>, drawing from his extensive background in data science and AI. His <b>passion for the subject matter is contagious</b>, and he has a <b>natural talent for keeping students engaged</b> while covering technical material.
-                                    
                                     I particularly appreciated how he <b>encouraged questions and fostered an interactive learning environment</b>. His <b>real-world examples and practical insights</b> made the learning experience both valuable and memorable.
-                                    
                                     If you're looking to learn about AI, machine learning, or data science, I highly recommend learning from Aishit. His <b>teaching style combines technical expertise with clear communication</b>, making him an <b>exceptional educator</b>."</p>
                             </div>
                             <div class="testimonial-author">
