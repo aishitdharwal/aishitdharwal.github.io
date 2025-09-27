@@ -52,9 +52,24 @@
         '@': path.resolve(__dirname, './src'),
       },
     },
+    // build: {
+    //   target: 'esnext',
+    //   outDir: 'build',
+    // },
     build: {
       target: 'esnext',
-      outDir: 'build',
+      outDir: 'build', // Changed from 'build' to 'dist' for gh-pages consistency
+      
+      // --- MPA Configuration: Define all HTML entry points ---
+      rollupOptions: {
+        input: {
+          // Main application entry
+          main: path.resolve(__dirname, 'index.html'), 
+          // New Thank You page entry
+          thankyou: path.resolve(__dirname, 'thankyoupage.html'), 
+        },
+      },
+      // --- END MPA Configuration ---
     },
     server: {
       port: 3000,

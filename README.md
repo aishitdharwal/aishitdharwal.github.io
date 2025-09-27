@@ -1,7 +1,7 @@
 
-  # AI Product Manager Course Branding Deck
+  # AIPM Webinar MVP Landing Page Mobile
 
-  This is a code bundle for AI Product Manager Course Branding Deck. The original project is available at https://www.figma.com/design/PPGZ4YcCrPyIeAzoNc2nA5/AI-Product-Manager-Course-Branding-Deck.
+  This is a code bundle for AIPM Webinar MVP Landing Page Mobile. The original project is available at https://www.figma.com/design/kQOGrBPKGlfVVsUNnbvIPn/AIPM-Webinar-MVP-Landing-Page-Mobile.
 
   ## Running the code
 
