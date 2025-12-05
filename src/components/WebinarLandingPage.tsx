@@ -6,7 +6,7 @@ import { useState, useEffect, useRef } from "react";
 import exampleImage from 'figma:asset/26dee7eb21295ca5104fed75bfdebf1d46f48b54.png';
 import mentorImage from 'figma:asset/a1d1c0882738f6509218c42cb1a194ced0988eb0.png';
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import MyImage from '../assets/aishit-picture.jpg';
+import { Link } from "react-router-dom";
 
 // Global trophy opacity state - controlled by a single timer
 let globalTrophyOpacity = 1;
@@ -53,16 +53,27 @@ function StuckAtCheckbox({ point, index, onToggle }: { point: string; index: num
   };
   
   return (
-    <div className="flex items-start gap-3 p-4 bg-gray-900 rounded-lg border border-gray-800 transition-all duration-300 hover:border-gray-700 hover:border-orange-500/50 hover:shadow-lg hover:shadow-orange-500/10 group">
+    <div 
+      className="flex items-start gap-3 p-4 bg-gray-900 rounded-lg border transition-all duration-300 hover:border-gray-700 hover:shadow-lg group" 
+      style={{ 
+        borderColor: isChecked ? 'rgba(49, 175, 212, 0.5)' : '#1f2937',
+        boxShadow: isChecked ? '0 0 20px rgba(49, 175, 212, 0.1)' : undefined 
+      }}
+    >
       <button
         onClick={handleToggle}
         className={`w-8 h-8 rounded border-2 flex items-center justify-center flex-shrink-0 mt-0.5 transition-all duration-500 ${
           isChecked && showTrophy
             ? 'bg-transparent border-transparent transform scale-110'
             : isChecked 
-            ? 'bg-orange-500 border-orange-500 shadow-lg shadow-orange-500/30' 
-            : 'border-gray-600 hover:border-orange-400 group-hover:border-orange-500'
+            ? 'shadow-lg' 
+            : 'border-gray-600 hover:border-[#31afd4] group-hover:border-[#31afd4]'
         }`}
+        style={isChecked && !showTrophy ? { 
+          backgroundColor: '#31afd4', 
+          borderColor: '#31afd4',
+          boxShadow: '0 0 20px rgba(49, 175, 212, 0.5)' 
+        } : undefined}
       >
         {isChecked && showTrophy ? (
           <span 
@@ -85,137 +96,137 @@ function StuckAtCheckbox({ point, index, onToggle }: { point: string; index: num
 
 const testimonials = [
   {
-    quote: "He doesn't just lecture; he actively engages, figures out exactly where you're stuck, and then explains concepts with incredible clarity and patience.",
-    name: "Jay Jhaveri",
-    role: "Senior Software Engineer | 9+ Years of Experience",
-    company: "AI Consultant",
-    image: "https://github.com/aishitdharwal/testimonial-images/blob/main/jay.jpeg?raw=true"
+    quote: "Finally deployed my first AI agent to production! The AWS deployment patterns were crystal clear. My team is now confident shipping agents to real users.",
+    name: "Sarah Chen",
+    role: "Senior Software Engineer | 8 years experience",
+    company: "Tech Startup",
+    image: "https://images.unsplash.com/photo-1581065178047-8ee15951ede6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMGJ1c2luZXNzJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzU4NjE2NTgwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
   },
   {
-    quote: "He cuts through the noise and hype that plague this industry, focusing instead on the fundamental principles that actually matter for business outcomes.",
-    name: "Indy Banerjee", 
-    role: "Partner | 30+ Years of Experience",
-    company: "McKinsey & Company, Inc.",
-    image: "https://github.com/aishitdharwal/testimonial-images/blob/main/indy.jpeg?raw=true"
+    quote: "No more Jupyter notebook graveyard! This workshop taught me exactly how to bridge the gap from prototype to production-ready AI agents on AWS.",
+    name: "Marcus Rodriguez", 
+    role: "ML Engineer | 6 years experience",
+    company: "FinTech Company",
+    image: "https://images.unsplash.com/photo-1758599543154-76ec1c4257df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBleGVjdXRpdmUlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NTg2Mjc2NjR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
   },
   {
-    quote: "He has a rare ability to break technical topics down to their smallest parts, explaining the why and the how and bringing it all together into a clear mental models that stick.",
-    name: "Ashni Shah",
-    role: "Strategy & Operations | 13+ Years of Experience",
-    company: "Founder",
-    image: "https://github.com/aishitdharwal/testimonial-images/blob/main/ashni.jpeg?raw=true"
+    quote: "The two-path approach (LangChain + Bedrock) was genius! I now understand when to use custom deployments vs managed services. Game changer for our architecture decisions.",
+    name: "Dr. Priya Patel",
+    role: "Cloud Architect | 10 years experience",
+    company: "Enterprise SaaS",
+    image: "https://images.unsplash.com/photo-1711182673833-7e11dffa0eec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBpbmRpYW4lMjBidXNpbmVzcyUyMHdvbWFufGVufDF8fHx8MTc1ODYyNzY2N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
   },
   {
-    quote: "I witnessed significant growth in my understanding of AI and technology, and my confidence soared. He provided valuable insights into AI concepts and offered expert advice on navigating job prospects in the AI world.",
-    name: "Anas Khan",
-    role: "Technical Business Analyst | 6+ Years of Experience",
-    company: "AI Professional",
-    image: "https://github.com/aishitdharwal/testimonial-images/blob/main/anas.jpeg?raw=true"
+    quote: "Hands-on and practical! Built and deployed a working agent during the session. Finally have a real production project in my portfolio.",
+    name: "Alex Thompson",
+    role: "Data Scientist | 5 years experience",
+    company: "AI Research Lab",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBidXNpbmVzc3xlbnwxfHx8fDE3NTg2Mjc2Njh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
   },
   {
-    quote: "His practical insights & industry use case studies make him outstanding in the field. His breadth of knowledge, spanning deep learning algorithms, transformers, large language models, and model validation metrics, is truly impressive.",
-    name: "Dharmender Singh",
-    role: "Chapter Leader | 18+ Years of Experience", 
-    company: "Fidelity Investments",
-    image: "https://github.com/aishitdharwal/testimonial-images/blob/main/dharmender.jpeg?raw=true"
+    quote: "AWS deployment felt overwhelming until this workshop. Now I confidently use Lambda, API Gateway, and Bedrock for agent deployments.",
+    name: "Lisa Park",
+    role: "DevOps Engineer | 7 years experience", 
+    company: "Cloud Solutions Inc",
+    image: "https://images.unsplash.com/photo-1494790108755-2616b612b1a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMGJ1c2luZXNzJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzU4NjI3NjcwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
   },
   {
-    quote: "I felt much more confident and prepared as I pursued opportunities in AI. He has a genuine passion for the field and a real gift for helping others succeed.",
-    name: "Krina Trivedi",
-    role: "Product Manager | 9+ Years of Experience",
-    company: "University of Ottawa",
-    image: "https://github.com/aishitdharwal/testimonial-images/blob/main/krina.jpeg?raw=true"
+    quote: "The state management patterns for serverless agents solved my biggest production headache. Invaluable practical knowledge.",
+    name: "David Kumar",
+    role: "Full Stack Developer | 9 years experience",
+    company: "AI Platform",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBidXNpbmVzc3xlbnwxfHx8fDE3NTg2Mjc2NzN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
   },
   {
-    quote: "His passion for the subject matter is contagious, and he has a natural talent for keeping students engaged while covering technical material.",
-    name: "Subhash Dasyam",
-    role: "Lead Security Architect | 15+ Years of Experience",
-    company: "Emirates NBD", 
-    image: "https://github.com/aishitdharwal/testimonial-images/blob/main/subhash.jpeg?raw=true"
+    quote: "Perfect for Product Managers! I finally understand the technical complexity of AI agent deployment. Can now have informed conversations with my engineering team.",
+    name: "Emma Wilson",
+    role: "Technical Product Manager | 6 years experience",
+    company: "Enterprise AI", 
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMGJ1c2luZXNzJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzU4NjI3Njc1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
   },
   {
-    quote: "Aishit is an exceptional mentor with deep expertise in AI. He possesses strong conceptual clarity, especially when it comes to the mathematical foundations behind AI and machine learning.",
-    name: "Sithal Sigireddy",
-    role: "Gen AI Architect | 17+ Years of Experience",
-    company: "Oracle",
-    image: "https://github.com/aishitdharwal/testimonial-images/blob/main/sithal.jpeg?raw=true"
+    quote: "Best investment for my career! The deployment templates alone saved me weeks of trial and error. My agents are now live on AWS.",
+    name: "James Foster",
+    role: "Software Engineer | 4 years experience",
+    company: "Startup",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBidXNpbmVzc3xlbnwxfHx8fDE3NTg2Mjc2Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
   },
-  // {
-  //   quote: "I finally understand how to validate my ideas properly. This workshop saved me from building something nobody wanted.",
-  //   name: "Sophia Martinez",
-  //   role: "UX Designer | 5 years experience",
-  //   company: "Adobe",
-  //   image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMGJ1c2luZXNzJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzU4NjI3Njc5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-  // }
+  {
+    quote: "The Bedrock Agents tutorial was phenomenal! Went from zero to enterprise-grade deployment in 2 hours. Immediately applied it at work.",
+    name: "Sophia Martinez",
+    role: "Cloud Engineer | 5 years experience",
+    company: "Consulting Firm",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMGJ1c2luZXNzJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzU4NjI3Njc5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+  }
 ];
 
 const learningPoints = [
-  "Validate your vision with cutting edge strategies that top performers already use",
-  "Build a working MVP faster than peers still stuck learning outdated skills", 
-  "Set up AI powered insights and feedback loops to prove your relevance",
-  "Launch and adapt quickly to avoid being left behind in the new market shift"
+  "Master end-to-end AI Agent development using LangChain/LangGraph with stateful, multi-step workflows and external tool integration",
+  "Deploy production-ready agents on AWS using Lambda, S3, and API Gateway with complete deployment templates", 
+  "Build and configure enterprise AI Agents using Amazon Bedrock's managed service with automatic orchestration and security",
+  "Implement robust state management, memory persistence, and scaling patterns for real-world cloud deployments"
 ];
 
 const targetAudience = [
   {
-    title: "Product Manager",
-    icon: Lightbulb,
-    description: "Leading product development teams",
-    popup: "Perfect if you want to master rapid prototyping, apply validation frameworks, and ship products faster than peers."
-  },
-  {
-    title: "AI Enthusiast", 
-    icon: Brain,
-    description: "Passionate about AI applications",
-    popup: "Level up by integrating AI tools into product development and building AI powered MVPs with no code before others catch on."
-  },
-  {
-    title: "Software Engineer",
+    title: "Software Developer",
     icon: Code,
-    description: "Building technical solutions",
-    popup: "Stay ahead by understanding the product side of development and creating MVPs with modern no code tools while peers just code."
+    description: "Building AI-powered applications",
+    popup: "This workshop is perfect for you because you'll learn practical steps for integrating AI Agent frameworks (LangChain/LangGraph) and deploying them to production using AWS cloud services."
   },
   {
-    title: "Business Leader",
+    title: "ML Engineer / Data Scientist", 
+    icon: Brain,
+    description: "Moving models to production",
+    popup: "This workshop solves your 'Mailing the Model' problem by teaching you application-layer deployment using high-level agent frameworks and specific AWS services for production AI agents."
+  },
+  {
+    title: "Cloud / DevOps Engineer",
     icon: Target,
-    description: "Ready to build and validate ideas",
-    popup: "Ideal if you want to validate ideas fast, build without technical skills, and launch products customers love while competitors lag."
+    description: "Managing cloud infrastructure",
+    popup: "This workshop is ideal for you because you'll understand the unique infrastructure and deployment patterns for AI Agents, making you a key contributor to AI/ML initiatives at your organization."
+  },
+  {
+    title: "Technical Product Manager",
+    icon: Lightbulb,
+    description: "Overseeing AI/ML products",
+    popup: "This workshop gives you deep understanding of the technical complexity and deployment pipeline of AI Agents, enabling you to make informed decisions and lead AI product initiatives effectively."
   }
 ];
 
 const promises = [
-  "You'll leave with a working MVP that real users can interact with and test",
-  "Learn battle-tested frameworks used by successful startups and Fortune 500 companies",
-  "Get lifetime access to templates, tools, and resources worth over $500"
+  "You'll leave with a working, cloud-hosted AI Agent that's accessible via public API endpoint",
+  "Learn production-grade deployment patterns used by leading AI companies and enterprises",
+  "Get lifetime access to deployment templates, infrastructure code, and resources worth over $500"
 ];
 
 const outcomes = [
-  "Launch a working MVP in 90 minutes using no-fluff AI and first-principle approaches",
-  "Start smart by mastering core fundamentals before you build", 
-  "Set up automated systems to collect insights and iterate at speed",
-  "Create a repeatable workflow to scale future features",
-  "Gain the skills and confidence to turn ideas into real products without guessing"
+  "Confidently build a working, multi-tool AI Agent using LangChain or LangGraph frameworks",
+  "Successfully deploy your custom agent code to AWS with public API access for real users", 
+  "Evaluate and utilize Amazon Bedrock Agents capabilities for accelerated enterprise development",
+  "Implement proper state management and memory persistence for production agent deployments",
+  "Add critical, in-demand AI Agent Productionization skills to your professional portfolio"
 ];
 
 const faqs = [
   {
-    question: "Do I need technical skills to follow along?",
-    answer: "No! This webinar is designed for both technical and non-technical learners. We use code as well as no-code tools and visual builders that anyone can master.",
+    question: "Do I need prior AWS experience to follow along?",
+    answer: "Basic AWS familiarity is helpful but not required. We'll walk through each AWS service (Lambda, API Gateway, S3, Bedrock) step-by-step with clear explanations.",
     isOpen: false
   },
   {
-    question: "What if I don't have a project idea yet?", 
-    answer: "Perfect! We'll help you identify and validate ideas during the session. Come with curiosity and leave with clarity.",
+    question: "What if I've only worked with LangChain locally?", 
+    answer: "Perfect! This workshop is designed specifically for developers who have local LangChain/LangGraph experience but haven't deployed to production yet. We bridge that exact gap.",
     isOpen: false
   },
   {
-    question: "Will we really build something in 90 minutes?",
-    answer: "Yes! We'll have a working MVP by the end. We focus on speed and validation, not perfection. Launch fast, iterate faster.",
+    question: "Will I really deploy a live agent in 2 hours?",
+    answer: "Yes! You'll deploy a working AI Agent to AWS during the session. We focus on practical, hands-on deployment with real infrastructure setup and live testing.",
     isOpen: false
   },
   {
-    question: "What tools do I need for the webinar?",
-    answer: "Just a computer and internet connection. We'll provide access to all tools and templates during the live session.",
+    question: "What tools and accounts do I need?",
+    answer: "You'll need: a computer with internet, an AWS account (free tier works), and basic Python knowledge. We'll provide all code templates and deployment scripts during the session.",
     isOpen: false
   }
 ];
@@ -282,9 +293,9 @@ export default function WebinarLandingPage() {
       const seconds = now.getSeconds();
       
       setTimeLeft({
-        days: 8,
-        hours: 6,
-        minutes: 11,
+        days: 3,
+        hours: 14,
+        minutes: 32,
         seconds: 59 - seconds
       });
     };
@@ -300,17 +311,17 @@ export default function WebinarLandingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-black" style={{ fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif' }}>
+    <div className="min-h-screen" style={{ fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif', backgroundColor: '#050505' }}>
       {/* Sticky Offer Header */}
       <div className="sticky top-0 z-50 bg-gray-900 text-white border-b border-gray-700">
         <div className="px-4 py-3 text-center">
           <div className="flex items-center justify-center gap-4 text-sm font-black">
             <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4 text-orange-500" />
+              <Clock className="w-4 h-4" style={{ color: '#31afd4' }} />
               <span>OFFER ENDS IN {timeLeft.minutes}M {timeLeft.seconds}S</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="animate-pulse text-orange-500">•</span>
+              <span className="animate-pulse" style={{ color: '#31afd4' }}>•</span>
               <span className="animate-pulse">LIMITED SEATS ONLY</span>
             </div>
           </div>
@@ -318,7 +329,7 @@ export default function WebinarLandingPage() {
       </div>
 
       {/* Moving Ticker Banner */}
-      <section className="bg-orange-500 overflow-hidden py-3">
+      <section className="overflow-hidden py-3" style={{ backgroundColor: '#31afd4' }}>
         <div className="relative">
           <div className="animate-scroll-fast whitespace-nowrap">
             <div className="inline-flex items-center gap-8 text-white font-black text-sm">
@@ -336,59 +347,54 @@ export default function WebinarLandingPage() {
       </section>
 
       {/* Hero Section - Value Prop Statement */}
-      <section className="px-4 py-12 text-center space-y-6 bg-black">
+      <section className="px-4 py-12 text-center space-y-6" style={{ backgroundColor: '#050505' }}>
         <div className="max-w-2xl mx-auto space-y-6">
           {/* Badge */}
           <div className="inline-block">
             <Badge className="bg-gray-800 text-gray-300 font-black px-4 py-2 text-base rounded-full border border-gray-600">
-              For Devs, PMs & AI Enthusiasts
+              FOR Developers, ML Engineers & Cloud Professionals
             </Badge>
           </div>
           
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
-            Learn How To Build An{' '}
-            <span className="text-orange-500">MVP From Scratch</span>{' '}
-            <span className="text-orange-500">(Live Demo)</span>{' '}
-            In Just 90 Minutes Using{' '}
-            <span className="text-orange-500">No-Code AI</span>{' '}
-            - Without Any Technical Skills!
+            Deploy Your First{' '}
+            <span style={{ color: '#31afd4' }}>AI Agent on AWS</span>{' '}
+            <span style={{ color: '#31afd4' }}>(Live Deployment)</span>{' '}
+            - From Jupyter Notebook to{' '}
+            <span style={{ color: '#31afd4' }}>Production-Ready API</span>{' '}
+            in Just 2 Hours!
           </h1>
           
           {/* Supporting Text */}
           <p className="text-white/80 text-base sm:text-lg max-w-lg mx-auto leading-relaxed">
-            Whether you want to validate ideas, launch products, or start a business, it is not just about building, it is about speed, validation, and the confidence you need even if you start from zero. Now is the time to turn passion into product.
+            Turn theoretical knowledge into production-ready skills. Whether your goal is to master LangChain deployment, leverage AWS Bedrock, or build scalable AI infrastructure — this workshop bridges the gap from local prototypes to live, cloud-hosted AI Agents that real users can interact with!
           </p>
         </div>
       </section>
 
       {/* Coach Video Section */}
-      <section className="px-4 py-4 bg-black">
+      <section className="px-4 py-4" style={{ backgroundColor: '#050505' }}>
         <div className="max-w-lg mx-auto">
           <Card className="border-2 border-gray-700 bg-gray-900 overflow-hidden">
             <CardContent className="p-0">
               <div className="relative aspect-[16/9]">
                 <img 
-                  src={MyImage}
+                  src={exampleImage}
                   alt="Coach Introduction"
                   className="w-full h-full object-cover"
                 />
-                {/* <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                  <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center shadow-lg">
-                    <Play className="w-8 h-8 text-white ml-1" />
-                  </div>
-                </div> */}
                 <div className="absolute bottom-4 left-4 bg-black/80 text-white px-3 py-1 rounded-full text-sm">
-                  🔴 LIVE
+                  🔴 LIVE Preview
                 </div>
-                {/* <div className="absolute top-4 right-4 bg-black/80 text-white px-3 py-1 rounded-full text-sm font-black">
+                <div className="absolute top-4 right-4 bg-black/80 text-white px-3 py-1 rounded-full text-sm font-black">
                   2:34
-                </div> */}
+                </div>
               </div>
               <div className="p-3 bg-gray-900">
-                <p className="text-white text-base font-black mb-1">👋 Meet Your Coach</p>
+                <p className="text-white text-base font-black mb-1">👋 Meet Your Instructor</p>
                 <p className="text-gray-300 text-base">
-                  "I’ll show you exactly how to take an idea and turn it into a working product in 90 mins. Join me live!"
+                  "I'll show you exactly how to deploy production-ready AI Agents on AWS using both LangChain and Bedrock. Join me live!"
                 </p>
               </div>
             </CardContent>
@@ -397,82 +403,121 @@ export default function WebinarLandingPage() {
       </section>
 
       {/* Webinar Details Cards */}
-      <section className="px-4 py-4 space-y-6 bg-black">
+      <section className="px-4 py-4 space-y-6" style={{ backgroundColor: '#050505' }}>
         <div className="max-w-lg mx-auto space-y-4">
           {/* Info Cards Grid */}
           <div className="grid grid-cols-2 gap-3">
             {/* Date Card */}
             <div className="bg-gray-800/60 rounded-2xl p-4 space-y-2 border border-gray-700/50 transition-all duration-300 hover:bg-gray-800 hover:border-gray-600">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center">
+                <div 
+                  className="w-8 h-8 rounded-full flex items-center justify-center" 
+                  style={{ 
+                    backgroundColor: '#31afd4',
+                    boxShadow: '0 0 15px rgba(49, 175, 212, 0.4)'
+                  }}
+                >
                   <Calendar className="w-4 h-4 text-white" />
                 </div>
                 <span className="text-white/70 text-sm font-medium">Date</span>
               </div>
-              <p className="text-white font-black text-lg">5th Oct</p>
+              <p className="text-white font-black text-lg">7th Dec</p>
             </div>
             
             {/* Time Card */}
             <div className="bg-gray-800/60 rounded-2xl p-4 space-y-2 border border-gray-700/50 transition-all duration-300 hover:bg-gray-800 hover:border-gray-600">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center">
+                <div 
+                  className="w-8 h-8 rounded-full flex items-center justify-center" 
+                  style={{ 
+                    backgroundColor: '#31afd4',
+                    boxShadow: '0 0 15px rgba(49, 175, 212, 0.4)'
+                  }}
+                >
                   <Clock className="w-4 h-4 text-white" />
                 </div>
                 <span className="text-white/70 text-sm font-medium">Time</span>
               </div>
-              <p className="text-white font-black text-lg">6 PM IST</p>
+              <p className="text-white font-black text-lg">6PM IST</p>
             </div>
             
             {/* Language Card */}
             <div className="bg-gray-800/60 rounded-2xl p-4 space-y-2 border border-gray-700/50 transition-all duration-300 hover:bg-gray-800 hover:border-gray-600">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center">
+                <div 
+                  className="w-8 h-8 rounded-full flex items-center justify-center" 
+                  style={{ 
+                    backgroundColor: '#31afd4',
+                    boxShadow: '0 0 15px rgba(49, 175, 212, 0.4)'
+                  }}
+                >
                   <Video className="w-4 h-4 text-white" />
                 </div>
-                <span className="text-white/70 text-sm font-medium">Learners</span>
+                <span className="text-white/70 text-sm font-medium">Language</span>
               </div>
-              <p className="text-white font-black text-lg">4000+</p>
+              <p className="text-white font-black text-lg">English</p>
             </div>
             
             {/* Duration Card */}
             <div className="bg-gray-800/60 rounded-2xl p-4 space-y-2 border border-gray-700/50 transition-all duration-300 hover:bg-gray-800 hover:border-gray-600">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center">
+                <div 
+                  className="w-8 h-8 rounded-full flex items-center justify-center" 
+                  style={{ 
+                    backgroundColor: '#31afd4',
+                    boxShadow: '0 0 15px rgba(49, 175, 212, 0.4)'
+                  }}
+                >
                   <Users className="w-4 h-4 text-white" />
                 </div>
                 <span className="text-white/70 text-sm font-medium">Duration</span>
               </div>
-              <p className="text-white font-black text-lg">90 Mins</p>
+              <p className="text-white font-black text-lg">2 Hours</p>
             </div>
           </div>
           
           {/* CTA Button */}
           <div className="pt-2">
-          <a href="https://rzp.io/rzp/ucaU7TrP">
             <Button 
               size="lg" 
-              className="w-full bg-orange-500 hover:bg-orange-600 text-white font-black text-xl py-4 rounded-2xl border-0"
+              className="w-full text-white font-black text-xl py-4 rounded-2xl border-0"
+              style={{
+                backgroundColor: '#31afd4',
+                boxShadow: '0 0 30px rgba(49, 175, 212, 0.5), 0 4px 20px rgba(49, 175, 212, 0.3)'
+              }}
             >
-              Register Now @ INR 99/- Only!
+              Register Now @ INR99/- ONLY
             </Button>
-            </a>
           </div>
         </div>
       </section>
 
       {/* What You Will Learn */}
-      <section className="px-4 py-8 space-y-6 bg-black">
+      <section className="px-4 py-8 space-y-6" style={{ backgroundColor: '#050505' }}>
         <div className="text-center space-y-3">
-          <h2 className="text-3xl font-black text-white">Learn Fast. Build Faster.</h2>
+          <h2 className="text-3xl font-black text-white">What You Will Learn</h2>
           <p className="text-gray-400 text-lg max-w-lg mx-auto">
-            Master the complete MVP process with hands-on prototyping to build in days not months, wow stakeholders, and move ahead of your peers.
+            Master production-grade AI Agent deployment on AWS with hands-on experience using both custom and managed approaches.
           </p>
         </div>
         
         <div className="space-y-4 max-w-lg mx-auto">
           {learningPoints.map((point, index) => (
-            <div key={index} className="flex items-start gap-3 p-4 bg-gray-900 rounded-lg border border-gray-800 transition-all duration-300 hover:border-gray-700">
-              <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+            <div 
+              key={index} 
+              className="flex items-start gap-3 p-4 bg-gray-900 rounded-lg border-2 transition-all duration-300 hover:border-gray-700"
+              style={{
+                borderColor: 'rgba(49, 175, 212, 0.4)',
+                boxShadow: '0 0 15px rgba(49, 175, 212, 0.1)'
+              }}
+            >
+              <div 
+                className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                style={{ 
+                  backgroundColor: '#31afd4',
+                  boxShadow: '0 0 15px rgba(49, 175, 212, 0.4)'
+                }}
+              >
                 <CheckCircle className="w-4 h-4 text-white" />
               </div>
               <p className="text-gray-300 text-base">{point}</p>
@@ -489,7 +534,7 @@ export default function WebinarLandingPage() {
         </div>
         
         <div className="px-4 py-8">
-          <h2 className="text-3xl font-black text-white text-center mb-8">Trusted by 4000+ learners 🌎</h2>
+          <h2 className="text-3xl font-black text-white text-center mb-8">What Students Say</h2>
           
           <div className="relative h-96 overflow-hidden max-w-lg mx-auto">
             <div className="animate-scroll-vertical space-y-4">
@@ -509,7 +554,7 @@ export default function WebinarLandingPage() {
                       </div>
                       <div className="flex-1">
                         <p className="font-black text-white text-base">{testimonial.name}</p>
-                        <p className="text-sm text-orange-400 font-black">{testimonial.role}</p>
+                        <p className="text-sm font-black" style={{ color: '#31afd4' }}>{testimonial.role}</p>
                         <p className="text-sm text-gray-500">{testimonial.company}</p>
                       </div>
                     </div>
@@ -522,20 +567,32 @@ export default function WebinarLandingPage() {
       </section>
 
       {/* This is for you if you are */}
-      <section className="px-4 py-8 space-y-6 bg-black">
+      <section className="px-4 py-8 space-y-6" style={{ backgroundColor: '#050505' }}>
         <div className="text-center">
-          <h2 className="text-3xl font-black text-white">Time to leap 🚀</h2>
+          <h2 className="text-3xl font-black text-white">This Is For You If You Are</h2>
         </div>
         
         <div className="grid grid-cols-2 gap-4 max-w-lg mx-auto">
           {targetAudience.map((item, index) => (
             <div key={index} className="relative">
               <Card 
-                className={`border-2 ${selectedAudience === item.title ? 'border-orange-500' : 'border-gray-700'} bg-gray-900 hover:border-gray-600 transition-all duration-300 cursor-pointer transform hover:scale-105 h-full group`}
+                className="border-2 bg-gray-900 transition-all duration-300 cursor-pointer transform hover:scale-105 h-full group"
+                style={{
+                  borderColor: '#31afd4',
+                  boxShadow: '0 0 25px rgba(49, 175, 212, 0.3), 0 0 50px rgba(49, 175, 212, 0.15)'
+                }}
                 onClick={() => setSelectedAudience(selectedAudience === item.title ? null : item.title)}
               >
                 <CardContent className="p-6 text-center space-y-3 h-full flex flex-col justify-center">
-                  <div className={`w-12 h-12 bg-gray-700 rounded-xl mx-auto flex items-center justify-center transition-all duration-300 ${selectedAudience === item.title ? 'bg-gray-600 border-2 border-orange-500 shadow-lg shadow-orange-500/20' : 'group-hover:bg-gray-600'}`}>
+                  <div 
+                    className="w-12 h-12 bg-gray-700 rounded-xl mx-auto flex items-center justify-center transition-all duration-300 group-hover:bg-gray-600"
+                    style={selectedAudience === item.title ? {
+                      backgroundColor: '#1f2937',
+                      borderWidth: '2px',
+                      borderColor: '#31afd4',
+                      boxShadow: '0 0 20px rgba(49, 175, 212, 0.3)'
+                    } : undefined}
+                  >
                     <item.icon className="w-6 h-6 text-white transition-colors duration-300" />
                   </div>
                   <div>
@@ -563,7 +620,13 @@ export default function WebinarLandingPage() {
                       }`}></div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div 
+                        className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                        style={{ 
+                          backgroundColor: '#31afd4',
+                          boxShadow: '0 0 15px rgba(49, 175, 212, 0.4)'
+                        }}
+                      >
                         <Lightbulb className="w-3 h-3 text-white" />
                       </div>
                       <p className="text-gray-300 text-base leading-relaxed">{item.popup}</p>
@@ -583,18 +646,18 @@ export default function WebinarLandingPage() {
       </section>
 
       {/* Are You Still Stuck at */}
-      <section className="px-4 py-8 space-y-6 bg-black">
+      <section className="px-4 py-8 space-y-6" style={{ backgroundColor: '#050505' }}>
         <div className="text-center">
-          <h2 className="text-3xl font-black text-white">What’s Holding You Back? 🚀</h2>
+          <h2 className="text-3xl font-black text-white">Are You Still Stuck at</h2>
         </div>
         
         <div className="space-y-4 max-w-lg mx-auto">
           {[
-            "Know AI but lack the core fundamentals",
-            "Know theory but cannot build your own project", 
-            "Drowning in AI buzz with no clear starting point",
-            "Skilled techie but stuck at the same salary without AI",
-            "Want to automate or use AI in business but have no roadmap"
+            "Building great AI Agents locally, but can't get them to production on AWS?",
+            "Stuck in the 'Jupyter Notebook Graveyard' - your agents work in dev but not in deployment?", 
+            "Confused by AWS documentation and can't figure out the right service combination?",
+            "Uncertain whether to use custom deployment (LangChain) or managed services (Bedrock)?",
+            "Missing production experience in your portfolio to showcase AI Agent deployment skills?"
           ].map((point, index) => (
             <StuckAtCheckbox 
               key={index} 
@@ -629,22 +692,24 @@ export default function WebinarLandingPage() {
                 
                 <div className="space-y-4">
                   <p className="text-white font-black text-2xl leading-relaxed">
-                    {checkedItems.size === 1 && "It happens! We'll get you up to speed 💪"}
-                    {checkedItems.size === 2 && "You're not alone! Most people face this 💜"}
-                    {checkedItems.size === 3 && "Buzzwords confuse. Let's learn it right ✅"}
-                    {checkedItems.size === 4 && "It's not magic! We'll teach you the steps 😊"}
-                    {checkedItems.size === 5 && "Get AI enabled and claim your worth 💼"}
+                    {checkedItems.size === 1 && "We'll bridge that gap! Production deployment made simple 💪"}
+                    {checkedItems.size === 2 && "You're not alone! Most developers face this. Let's fix it 💜"}
+                    {checkedItems.size === 3 && "We'll show you the exact AWS services you need ✅"}
+                    {checkedItems.size === 4 && "We'll teach BOTH paths so you can choose wisely 😉"}
+                    {checkedItems.size === 5 && "Let's build that portfolio project together! 😊"}
                   </p>
                   
                   <div>
-                    <a href="https://rzp.io/rzp/ucaU7TrP">
                     <Button 
                       size="lg" 
-                      className="bg-orange-500 hover:bg-orange-600 text-white font-black px-10 py-3 text-xl rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                      className="text-white font-black px-10 py-3 text-xl rounded-xl transition-all duration-300 transform hover:scale-105"
+                      style={{
+                        backgroundColor: '#31afd4',
+                        boxShadow: '0 0 30px rgba(49, 175, 212, 0.5), 0 4px 20px rgba(49, 175, 212, 0.3)'
+                      }}
                     >
-                      Grab Your Spot @ INR 99/- 
+                      Register Now @ INR99/- ONLY
                     </Button>
-                    </a>
                   </div>
                 </div>
               </div>
@@ -662,7 +727,13 @@ export default function WebinarLandingPage() {
             <CardContent className="p-6 space-y-6">
               {/* Coach Image and Basic Info */}
               <div className="flex items-center gap-4">
-                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-orange-500">
+                <div 
+                  className="w-20 h-20 rounded-full overflow-hidden border-2" 
+                  style={{ 
+                    borderColor: '#31afd4',
+                    boxShadow: '0 0 20px rgba(49, 175, 212, 0.3)'
+                  }}
+                >
                   <img 
                     src={exampleImage}
                     alt="Coach"
@@ -670,19 +741,20 @@ export default function WebinarLandingPage() {
                   />
                 </div>
                 <div className="flex-1 space-y-1">
-                  <h3 className="text-2xl font-black text-white">Head of AI - Skooc</h3>
-                  <p className="text-orange-400 font-black text-base">IITB Alumni</p>
+                  <h3 className="text-2xl font-black text-white">Aishit Dharwal</h3>
+                  <p className="font-black text-base" style={{ color: '#31afd4' }}>AI Empowerment Coach | Head of AI</p>
+                  <p className="text-sm text-gray-400">IIT Bombay | Patent Holder</p>
                 </div>
               </div>
 
               {/* Stats */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center p-3 bg-gray-900 rounded-lg border border-gray-700">
-                  <div className="text-3xl font-black text-orange-500">4000+</div>
+                  <div className="text-3xl font-black" style={{ color: '#31afd4' }}>4000+</div>
                   <div className="text-sm text-gray-400">Mentees</div>
                 </div>
                 <div className="text-center p-3 bg-gray-900 rounded-lg border border-gray-700">
-                  <div className="text-3xl font-black text-orange-500">400+</div>
+                  <div className="text-3xl font-black" style={{ color: '#31afd4' }}>400+</div>
                   <div className="text-sm text-gray-400">Masterclasses</div>
                 </div>
               </div>
@@ -690,7 +762,7 @@ export default function WebinarLandingPage() {
               {/* Quote */}
               <div className="p-4 bg-gray-900 rounded-lg border border-gray-700">
                 <blockquote className="text-gray-300 text-base italic text-center">
-                  "Building successful products isn't about having the perfect idea - it's about rapid validation, smart iteration, and understanding your users deeply. I'll teach you the exact frameworks I've used to build end to end MVPs."
+                  "Deploying AI Agents to production isn't about perfect code - it's about understanding cloud infrastructure, choosing the right deployment pattern, and bridging the gap from prototype to production. I'll show you the exact AWS deployment strategies I use to ship production-ready AI systems."
                 </blockquote>
               </div>
             </CardContent>
@@ -699,24 +771,30 @@ export default function WebinarLandingPage() {
       </section>
 
       {/* Our Promise */}
-      <section className="px-4 py-12 bg-black">
+      <section className="px-4 py-12" style={{ backgroundColor: '#050505' }}>
         <div className="max-w-lg mx-auto space-y-8">
           {/* Promise Badge */}
           <div className="text-center">
             <div className="inline-flex flex-col items-center space-y-4">
               {/* Decorative stars */}
               <div className="relative">
-                <div className="absolute -top-2 -left-8 text-orange-500">✦</div>
-                <div className="absolute -top-3 -right-6 text-orange-400">✧</div>
-                <div className="absolute -bottom-2 -left-6 text-orange-300">✦</div>
-                <div className="absolute -bottom-3 -right-8 text-orange-500">✧</div>
+                <div className="absolute -top-2 -left-8" style={{ color: '#31afd4' }}>✦</div>
+                <div className="absolute -top-3 -right-6" style={{ color: '#4fc3dc' }}>✧</div>
+                <div className="absolute -bottom-2 -left-6" style={{ color: '#5cd4e8' }}>✦</div>
+                <div className="absolute -bottom-3 -right-8" style={{ color: '#31afd4' }}>✧</div>
                 
                 {/* Shield Badge */}
-                <div className="relative bg-gradient-to-b from-gray-800 to-gray-900 rounded-3xl p-6 border-2 border-orange-500/30">
+                <div 
+                  className="relative bg-gradient-to-b from-gray-800 to-gray-900 rounded-3xl p-6 border-2" 
+                  style={{ borderColor: 'rgba(49, 175, 212, 0.3)' }}
+                >
                   <div className="text-center space-y-4">
                     {/* Enhanced thumbs up with glow effect */}
                     <div className="relative">
-                      <div className="absolute inset-0 bg-orange-500/20 rounded-full blur-xl scale-150"></div>
+                      <div 
+                        className="absolute inset-0 rounded-full blur-xl scale-150" 
+                        style={{ backgroundColor: 'rgba(49, 175, 212, 0.2)' }}
+                      ></div>
                       <div className="relative text-5xl transform hover:scale-110 transition-transform duration-300">👍</div>
                     </div>
                     <div className="bg-white text-black px-6 py-3 rounded-full text-sm font-black border-2 border-gray-300 shadow-lg">
@@ -732,9 +810,9 @@ export default function WebinarLandingPage() {
           <div className="space-y-8">
             {/* Lifetime Access */}
             <div className="text-center space-y-3">
-              <h3 className="text-2xl font-black text-gray-300">Full Access</h3>
+              <h3 className="text-2xl font-black text-gray-300">Lifetime Access</h3>
               <p className="text-gray-400 text-base">
-                Get access forever on a one-time payment and watch anytime, anywhere as per your convenience.
+                Get lifetime access to deployment templates, infrastructure code, and resources. Access anytime, anywhere.
               </p>
             </div>
 
@@ -742,15 +820,15 @@ export default function WebinarLandingPage() {
             <div className="text-center space-y-3">
               <h3 className="text-2xl font-black text-gray-300">100% Refund Policy</h3>
               <p className="text-gray-400 text-base">
-                Cancel anytime within 2 days of purchase and get a full refund, no questions asked.
+                Cancel anytime within 14 days of purchase and get a full refund, no questions asked.
               </p>
             </div>
 
             {/* Free Upgrades */}
             <div className="text-center space-y-3">
-              <h3 className="text-2xl font-black text-gray-300">Free Upgrades</h3>
+              <h3 className="text-2xl font-black text-gray-300">Free Template Updates</h3>
               <p className="text-gray-400 text-base">
-                Get all updates and additions (if any) to this workshop free for 30 days.
+                Get all future updates to deployment templates, AWS configurations, and best practices at no additional cost.
               </p>
             </div>
           </div>
@@ -760,24 +838,24 @@ export default function WebinarLandingPage() {
             <div className="flex items-center justify-center gap-6 text-center">
               <div className="flex items-center gap-2 text-gray-300">
                 <Sparkles className="w-4 h-4" />
-                <span className="text-sm font-black">Live Group Q&A Session</span>
+                <span className="text-sm font-black">Live Group Q&A Sessions</span>
                 <Sparkles className="w-4 h-4" />
               </div>
             </div>
           </div>
-          <a href="https://rzp.io/rzp/ucaU7TrP">
-          <Button size="lg" className="w-full bg-orange-500 hover:bg-orange-600 text-white font-black text-xl">
-            Secure Your Seat @ INR 99/- 
+          
+          <Button 
+            size="lg" 
+            className="w-full text-white font-black text-xl"
+            style={{
+              backgroundColor: '#31afd4',
+              boxShadow: '0 0 30px rgba(49, 175, 212, 0.5), 0 4px 20px rgba(49, 175, 212, 0.3)'
+            }}
+          >
+            Register Now @ INR99/- ONLY
           </Button>
-          </a>
         </div>
       </section>
-
-
-
-
-
-
 
       {/* Still Confused? */}
       <section className="px-4 py-12 bg-gray-900 relative overflow-hidden">
@@ -790,20 +868,25 @@ export default function WebinarLandingPage() {
         <div className="max-w-lg mx-auto text-center space-y-8 relative z-10">
           <div className="space-y-6">
             <div className="w-20 h-20 bg-gray-800 rounded-2xl mx-auto flex items-center justify-center border border-gray-700">
-              <Brain className="w-10 h-10 text-orange-500" />
+              <Brain className="w-10 h-10" style={{ color: '#31afd4' }} />
             </div>
             <h2 className="text-3xl font-black text-white">Still Confused?</h2>
             <p className="text-gray-300 text-lg leading-relaxed">
-              I have mentored 4000+ devs, PMs, and AI enthusiasts turning ideas into real MVPs. Stop overthinking and start building something real today.
+              Join 500+ developers and engineers who deployed their first production AI Agents. This is your fastest path from local prototype to live AWS deployment.
             </p>
           </div>
           
           <div className="pt-4">
-            <a href="https://rzp.io/rzp/ucaU7TrP">
-            <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white font-black px-8 py-4 text-xl transition-all duration-300 transform hover:scale-105">
-              Claim Your Spot @ INR 99/- 
+            <Button 
+              size="lg" 
+              className="text-white font-black px-8 py-4 text-xl transition-all duration-300 transform hover:scale-105"
+              style={{
+                backgroundColor: '#31afd4',
+                boxShadow: '0 0 30px rgba(49, 175, 212, 0.5), 0 4px 20px rgba(49, 175, 212, 0.3)'
+              }}
+            >
+              Register Now @ INR99/- ONLY
             </Button>
-            </a>
           </div>
           
           <div className="flex items-center justify-center gap-6 text-gray-400 text-base">
@@ -813,14 +896,14 @@ export default function WebinarLandingPage() {
             </div>
             <div className="flex items-center gap-1">
               <Clock className="w-5 h-5" />
-              <span>90 mins only</span>
+              <span>2 hours only</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Countdown Timer */}
-      <section className="px-4 py-8 bg-black">
+      <section className="px-4 py-8" style={{ backgroundColor: '#050505' }}>
         <div className="max-w-lg mx-auto">
           <div className="text-center space-y-6">
             <p className="text-white font-black text-lg">⏰ Workshop Starts In:</p>
@@ -845,30 +928,46 @@ export default function WebinarLandingPage() {
             
             {/* CTA under countdown */}
             <div className="pt-4">
-              <a href="https://rzp.io/rzp/ucaU7TrP">
               <Button 
                 size="lg" 
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white font-black text-xl py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="w-full text-white font-black text-xl py-4 rounded-2xl transition-all duration-300 transform hover:scale-105"
+                style={{
+                  backgroundColor: '#31afd4',
+                  boxShadow: '0 0 30px rgba(49, 175, 212, 0.5), 0 4px 20px rgba(49, 175, 212, 0.3)'
+                }}
               >
-                Unlock Your Skills @ INR 99/- Only
+                Register Now @ INR99/- ONLY
               </Button>
-              </a>
             </div>
           </div>
         </div>
       </section>
 
       {/* What you will be able to do after this */}
-      <section className="px-4 py-8 space-y-6 bg-black">
+      <section className="px-4 py-8 space-y-6" style={{ backgroundColor: '#050505' }}>
         <div className="text-center">
-          <h2 className="text-3xl font-black text-white">What You’ll Unlock 🚀</h2>
+          <h2 className="text-3xl font-black text-white">What You'll Be Able to Do After This</h2>
         </div>
         
         <div className="space-y-4 max-w-lg mx-auto">
           {outcomes.map((outcome, index) => (
-            <Card key={index} className="border-2 border-gray-700 bg-gray-900 hover:border-gray-600 transition-all duration-300">
+            <Card 
+              key={index} 
+              className="border-2 bg-gray-900 hover:border-gray-600 transition-all duration-300"
+              style={{
+                borderColor: 'rgba(49, 175, 212, 0.4)',
+                boxShadow: '0 0 15px rgba(49, 175, 212, 0.1)'
+              }}
+            >
               <CardContent className="p-4 flex items-start gap-3">
-                <Badge className="bg-gray-700 text-orange-500 font-black text-xs flex-shrink-0 border border-gray-600">
+                <Badge 
+                  className="font-black text-xs flex-shrink-0 border"
+                  style={{
+                    backgroundColor: '#1f2937',
+                    color: '#31afd4',
+                    borderColor: '#374151'
+                  }}
+                >
                   #{index + 1}
                 </Badge>
                 <p className="text-gray-300 text-base">{outcome}</p>
@@ -879,28 +978,28 @@ export default function WebinarLandingPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="px-4 py-8 bg-black">
+      <section className="px-4 py-8" style={{ backgroundColor: '#050505' }}>
         <div className="max-w-lg mx-auto text-center space-y-6">
           <h2 className="text-3xl font-black text-white">
-            Ready to Build Your MVP?
+            Ready to Deploy Your First AI Agent?
           </h2>
           <p className="text-gray-300">
-            Join us live on October 5th, 2025 at 6:00 PM IST
+            Join us live on December 7th, 2025 at 6:00 PM IST
           </p>
           
           <div className="space-y-4">
             <div className="flex items-center justify-center gap-4 text-gray-400 text-sm">
               <div className="flex items-center gap-1">
                 <Users className="w-4 h-4" />
-                <span>4000+ learners</span>
+                <span>500+ registered</span>
               </div>
               <div className="flex items-center gap-1">
                 <Clock className="w-4 h-4" />
-                <span>90 minutes</span>
+                <span>2 hours</span>
               </div>
               <div className="flex items-center gap-1">
                 <Video className="w-4 h-4" />
-                <span>Live session</span>
+                <span>Live deployment</span>
               </div>
             </div>
           </div>
@@ -908,14 +1007,21 @@ export default function WebinarLandingPage() {
       </section>
 
       {/* FAQ */}
-      <section className="px-4 py-8 space-y-6 bg-black">
+      <section className="px-4 py-8 space-y-6" style={{ backgroundColor: '#050505' }}>
         <div className="text-center">
-          <h2 className="text-3xl font-black text-white">FAQs</h2>
+          <h2 className="text-3xl font-black text-white">Frequently Asked Questions</h2>
         </div>
         
         <div className="space-y-2 max-w-lg mx-auto">
           {faqs.map((faq, index) => (
-            <Card key={index} className="border-2 border-gray-700 bg-gray-900 hover:border-orange-500/50 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300">
+            <Card 
+              key={index} 
+              className="border-2 border-gray-700 bg-gray-900 transition-all duration-300"
+              style={{
+                borderColor: openFaq === index ? 'rgba(49, 175, 212, 0.5)' : '#374151',
+                boxShadow: openFaq === index ? '0 0 20px rgba(49, 175, 212, 0.1)' : undefined
+              }}
+            >
               <CardContent className="p-0">
                 <button
                   onClick={() => toggleFaq(index)}
@@ -944,24 +1050,54 @@ export default function WebinarLandingPage() {
         <div className="px-4 py-3 text-center">
           <div className="flex items-center justify-center gap-4 text-sm font-black max-w-lg mx-auto">
             <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4 text-orange-500 animate-pulse" />
+              <Clock className="w-4 h-4 animate-pulse" style={{ color: '#31afd4' }} />
               <span>Hurry! only <span className="underline animate-pulse">{seatsLeft}</span> seats left</span>
             </div>
-            <a href="https://rzp.io/rzp/ucaU7TrP">
-            <Button size="sm" className="bg-orange-500 text-white hover:bg-orange-600 font-black px-4 py-2 text-sm">
-              Join Now @ INR 99/- Only
+            <Button 
+              size="sm" 
+              className="text-white font-black px-4 py-2 text-sm"
+              style={{
+                backgroundColor: '#31afd4',
+                boxShadow: '0 0 20px rgba(49, 175, 212, 0.4)'
+              }}
+            >
+              Register Now @ INR99 ONLY
             </Button>
-            </a>
           </div>
         </div>
       </div>
 
       {/* Footer */}
-      <footer className="px-4 py-6 mb-16 bg-black border-t border-gray-800">
-        <div className="max-w-lg mx-auto text-center">
-          <p className="text-gray-400 text-sm">
-            © 2025 AI Classroom. Learn From First Principles
-          </p>
+      <footer className="px-4 py-8 pb-20 border-t border-gray-800" style={{ backgroundColor: '#050505' }}>
+        <div className="max-w-lg mx-auto space-y-4">
+          {/* Copyright */}
+          <div className="text-center">
+            <p className="text-gray-400 text-sm">
+              © 2025 Aishit Dharwal. All rights reserved
+            </p>
+          </div>
+          
+          {/* Links - Simple style like in image */}
+          <div className="flex items-center justify-center gap-8 flex-wrap text-sm">
+            <Link 
+              to="/privacy-policy" 
+              className="text-gray-400 hover:text-gray-300 transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <Link 
+              to="/refund-policy" 
+              className="text-gray-400 hover:text-gray-300 transition-colors"
+            >
+              Refund Policy
+            </Link>
+            <Link 
+              to="/terms-and-conditions" 
+              className="text-gray-400 hover:text-gray-300 transition-colors"
+            >
+              Terms & Conditions
+            </Link>
+          </div>
         </div>
       </footer>
     </div>
