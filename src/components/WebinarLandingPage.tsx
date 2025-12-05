@@ -295,8 +295,8 @@ export default function WebinarLandingPage() {
       
       setTimeLeft({
         days: 8,
-        hours: 19,
-        minutes: 10,
+        hours: 16,
+        minutes: 34,
         seconds: 59 - seconds
       });
     };
@@ -745,14 +745,14 @@ export default function WebinarLandingPage() {
                 <div className="flex-1 space-y-1">
                   <h3 className="text-2xl font-black text-white">Aishit Dharwal</h3>
                   <p className="font-black text-base" style={{ color: '#31afd4' }}>AI Educator | Head of AI</p>
-                  <p className="text-sm text-gray-400">IIT Bombay | Patent Holder</p>
+                  <p className="text-sm text-gray-400">IIT Bombay Alum | Patent Holder</p>
                 </div>
               </div>
 
               {/* Stats */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center p-3 bg-gray-900 rounded-lg border border-gray-700">
-                  <div className="text-3xl font-black" style={{ color: '#31afd4' }}>4000+</div>
+                  <div className="text-3xl font-black" style={{ color: '#31afd4' }}>5000+</div>
                   <div className="text-sm text-gray-400">Mentees</div>
                 </div>
                 <div className="text-center p-3 bg-gray-900 rounded-lg border border-gray-700">
@@ -822,7 +822,7 @@ export default function WebinarLandingPage() {
             <div className="text-center space-y-3">
               <h3 className="text-2xl font-black text-gray-300">100% Refund Policy</h3>
               <p className="text-gray-400 text-base">
-                Cancel anytime within 14 days of purchase and get a full refund, no questions asked.
+                Cancel anytime within 48 hours of purchase and get a full refund, no questions asked.
               </p>
             </div>
 
@@ -876,7 +876,7 @@ export default function WebinarLandingPage() {
             </div>
             <h2 className="text-3xl font-black text-white">Still Confused?</h2>
             <p className="text-gray-300 text-lg leading-relaxed">
-              Join 500+ developers and engineers who deployed their first production AI Agents. This is your fastest path from local prototype to live AWS deployment.
+              Join 200+ developers and engineers who deployed their first production AI Agents. This is your fastest path from local prototype to live AWS deployment.
             </p>
           </div>
           
@@ -898,7 +898,7 @@ export default function WebinarLandingPage() {
           <div className="flex items-center justify-center gap-6 text-gray-400 text-base">
             <div className="flex items-center gap-1">
               <Users className="w-5 h-5" />
-              <span>500+ enrolled</span>
+              <span>200+ enrolled</span>
             </div>
             <div className="flex items-center gap-1">
               <Clock className="w-5 h-5" />
@@ -999,7 +999,7 @@ export default function WebinarLandingPage() {
             <div className="flex items-center justify-center gap-4 text-gray-400 text-sm">
               <div className="flex items-center gap-1">
                 <Users className="w-4 h-4" />
-                <span>500+ registered</span>
+                <span>200+ registered</span>
               </div>
               <div className="flex items-center gap-1">
                 <Clock className="w-4 h-4" />
