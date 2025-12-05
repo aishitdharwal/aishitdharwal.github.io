@@ -7,6 +7,7 @@ import exampleImage from 'figma:asset/26dee7eb21295ca5104fed75bfdebf1d46f48b54.p
 import mentorImage from 'figma:asset/a1d1c0882738f6509218c42cb1a194ced0988eb0.png';
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Link } from "react-router-dom";
+import MyImage from '../assets/aishit-picture.jpg';
 
 // Global trophy opacity state - controlled by a single timer
 let globalTrophyOpacity = 1;
@@ -377,21 +378,21 @@ export default function WebinarLandingPage() {
             <CardContent className="p-0">
               <div className="relative aspect-[16/9]">
                 <img 
-                  src={exampleImage}
+                  src={MyImage}
                   alt="Coach Introduction"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute bottom-4 left-4 bg-black/80 text-white px-3 py-1 rounded-full text-sm">
+                {/* <div className="absolute bottom-4 left-4 bg-black/80 text-white px-3 py-1 rounded-full text-sm">
                   🔴 LIVE Preview
                 </div>
                 <div className="absolute top-4 right-4 bg-black/80 text-white px-3 py-1 rounded-full text-sm font-black">
                   2:34
-                </div>
+                </div> */}
               </div>
               <div className="p-3 bg-gray-900">
                 <p className="text-white text-base font-black mb-1">👋 Meet Your Instructor</p>
                 <p className="text-gray-300 text-base">
-                  "I'll show you exactly how to deploy production-ready AI Agents on AWS using Production grade best practices. Join me live!"
+                  I'll show you exactly how to deploy production-ready AI Agents on AWS using Production grade best practices. Join me live!
                 </p>
               </div>
             </CardContent>
@@ -475,6 +476,7 @@ export default function WebinarLandingPage() {
           
           {/* CTA Button */}
           <div className="pt-2">
+          <a href="https://rzp.io/rzp/PeYihNh">
             <Button 
               size="lg" 
               className="w-full text-white font-black text-xl py-4 rounded-2xl border-0"
@@ -485,6 +487,7 @@ export default function WebinarLandingPage() {
             >
               Register Now @ INR 99/- ONLY
             </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -697,6 +700,7 @@ export default function WebinarLandingPage() {
                   </p>
                   
                   <div>
+                  <a href="https://rzp.io/rzp/PeYihNh">
                     <Button 
                       size="lg" 
                       className="text-white font-black px-10 py-3 text-xl rounded-xl transition-all duration-300 transform hover:scale-105"
@@ -707,6 +711,7 @@ export default function WebinarLandingPage() {
                     >
                       Register Now @ INR 99/- ONLY
                     </Button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -841,6 +846,7 @@ export default function WebinarLandingPage() {
             </div>
           </div>
           
+          <a href="https://rzp.io/rzp/PeYihNh">
           <Button 
             size="lg" 
             className="w-full text-white font-black text-xl"
@@ -851,6 +857,7 @@ export default function WebinarLandingPage() {
           >
             Register Now @ INR 99/- ONLY
           </Button>
+          </a>
         </div>
       </section>
 
@@ -874,6 +881,7 @@ export default function WebinarLandingPage() {
           </div>
           
           <div className="pt-4">
+          <a href="https://rzp.io/rzp/PeYihNh">
             <Button 
               size="lg" 
               className="text-white font-black px-8 py-4 text-xl transition-all duration-300 transform hover:scale-105"
@@ -884,6 +892,7 @@ export default function WebinarLandingPage() {
             >
               Register Now @ INR 99/- ONLY
             </Button>
+            </a>
           </div>
           
           <div className="flex items-center justify-center gap-6 text-gray-400 text-base">
@@ -925,6 +934,7 @@ export default function WebinarLandingPage() {
             
             {/* CTA under countdown */}
             <div className="pt-4">
+            <a href="https://rzp.io/rzp/PeYihNh">
               <Button 
                 size="lg" 
                 className="w-full text-white font-black text-xl py-4 rounded-2xl transition-all duration-300 transform hover:scale-105"
@@ -935,6 +945,7 @@ export default function WebinarLandingPage() {
               >
                 Register Now @ INR 99/- ONLY
               </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -1050,6 +1061,7 @@ export default function WebinarLandingPage() {
               <Clock className="w-4 h-4 animate-pulse" style={{ color: '#31afd4' }} />
               <span>Hurry! only <span className="underline animate-pulse">{seatsLeft}</span> seats left</span>
             </div>
+            <a href="https://rzp.io/rzp/PeYihNh">
             <Button 
               size="sm" 
               className="text-white font-black px-4 py-2 text-sm"
@@ -1060,6 +1072,7 @@ export default function WebinarLandingPage() {
             >
               Register Now @ INR 99 ONLY
             </Button>
+            </a>
           </div>
         </div>
       </div>
