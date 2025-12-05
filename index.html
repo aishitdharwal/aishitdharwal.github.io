@@ -29,6 +29,16 @@
 
       <div id="root"></div>
       <script type="module" src="/src/main.tsx"></script>
+      <!-- 404 Redirect Handler -->
+      <script>
+        // Check if we were redirected from a 404
+        const redirectPath = sessionStorage.getItem('redirectPath');
+        if (redirectPath) {
+          sessionStorage.removeItem('redirectPath');
+          // Replace the URL without reloading the page
+          window.history.replaceState(null, '', redirectPath);
+        }
+      </script>
       <noscript><img height="1" width="1" style="display:none"
         src="https://www.facebook.com/tr?id=1610199436629763&ev=PageView&noscript=1"
         />

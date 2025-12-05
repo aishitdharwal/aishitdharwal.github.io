@@ -67,6 +67,8 @@
           main: path.resolve(__dirname, 'index.html'), 
           // New Thank You page entry
           thankyou: path.resolve(__dirname, 'thankyoupage.html'), 
+          // 404 page for GitHub Pages routing
+          notfound: path.resolve(__dirname, '404.html'),
         },
       },
       // --- END MPA Configuration ---
