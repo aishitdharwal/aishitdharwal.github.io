@@ -293,9 +293,9 @@ export default function WebinarLandingPage() {
       const seconds = now.getSeconds();
       
       setTimeLeft({
-        days: 3,
-        hours: 14,
-        minutes: 32,
+        days: 8,
+        hours: 19,
+        minutes: 10,
         seconds: 59 - seconds
       });
     };
@@ -358,17 +358,14 @@ export default function WebinarLandingPage() {
           
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
-            Deploy Your First{' '}
-            <span style={{ color: '#31afd4' }}>AI Agent on AWS</span>{' '}
-            <span style={{ color: '#31afd4' }}>(Live Deployment)</span>{' '}
-            - From Jupyter Notebook to{' '}
-            <span style={{ color: '#31afd4' }}>Production-Ready API</span>{' '}
-            in Just 2 Hours!
+            Hands On. Zero Fluff. {' '}
+            <span style={{ color: '#31afd4' }}>Deploy Your AI Agent on AWS</span>{' '}
+            in 90 Minutes.
           </h1>
           
           {/* Supporting Text */}
           <p className="text-white/80 text-base sm:text-lg max-w-lg mx-auto leading-relaxed">
-            Turn theoretical knowledge into production-ready skills. Whether your goal is to master LangChain deployment, leverage AWS Bedrock, or build scalable AI infrastructure - this workshop bridges the gap from local prototypes to live, cloud-hosted AI Agents that real users can interact with!
+          Master the step that truly counts. Deploy an AI Agent to AWS and make it usable in the real world.
           </p>
         </div>
       </section>
@@ -742,7 +739,7 @@ export default function WebinarLandingPage() {
                 </div>
                 <div className="flex-1 space-y-1">
                   <h3 className="text-2xl font-black text-white">Aishit Dharwal</h3>
-                  <p className="font-black text-base" style={{ color: '#31afd4' }}>AI Empowerment Coach | Head of AI</p>
+                  <p className="font-black text-base" style={{ color: '#31afd4' }}>AI Educator | Head of AI</p>
                   <p className="text-sm text-gray-400">IIT Bombay | Patent Holder</p>
                 </div>
               </div>
@@ -812,7 +809,7 @@ export default function WebinarLandingPage() {
             <div className="text-center space-y-3">
               <h3 className="text-2xl font-black text-gray-300">Lifetime Access</h3>
               <p className="text-gray-400 text-base">
-                Get lifetime access to deployment templates, infrastructure code, and resources. Access anytime, anywhere.
+                Get lifetime access to all resources. Access anytime, anywhere.
               </p>
             </div>
 
@@ -828,7 +825,7 @@ export default function WebinarLandingPage() {
             <div className="text-center space-y-3">
               <h3 className="text-2xl font-black text-gray-300">Free Template Updates</h3>
               <p className="text-gray-400 text-base">
-                Get all future updates to deployment templates, AWS configurations, and best practices at no additional cost.
+                Get all updates and additions (if any) to this workshop free for 30 days.
               </p>
             </div>
           </div>
