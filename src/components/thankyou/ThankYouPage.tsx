@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 export default function ThankYouPage() {
   const handleJoinWhatsApp = () => {
-    window.open('https://chat.whatsapp.com/G0mcJWewWMSHEYSi553HuL', '_blank');
+    window.open('https://chat.whatsapp.com/JoHN1i6BTTa1Tm0Fuu59nZ', '_blank');
   };
 
   return (
@@ -15,7 +15,8 @@ export default function ThankYouPage() {
           <div className="relative -mt-4 mb-12 md:mb-16">
             {/* Animated Glow Background */}
             <motion.div 
-              className="absolute inset-0 bg-orange-500/20 rounded-full blur-2xl"
+              className="absolute inset-0 rounded-full blur-2xl"
+              style={{backgroundColor: 'rgba(49, 175, 212, 0.2)'}}
               animate={{
                 scale: [1.8, 2.2, 1.8],
                 opacity: [0.3, 0.6, 0.3]
@@ -40,11 +41,16 @@ export default function ThankYouPage() {
               }}
             >
               {/* 3D Shadow Layer */}
-              <div className="absolute inset-0 bg-orange-600 rounded-full translate-y-1 blur-sm"></div>
+              <div className="absolute inset-0 rounded-full translate-y-1 blur-sm" style={{backgroundColor: '#2a9aba'}}></div>
               
               {/* Main Circle with 3D effect */}
               <motion.div 
-                className="relative w-full h-full bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 rounded-full flex items-center justify-center border-4 border-orange-300/50 shadow-2xl shadow-orange-500/50"
+                className="relative w-full h-full rounded-full flex items-center justify-center border-4 shadow-2xl"
+                style={{
+                  background: "linear-gradient(135deg, #4fc3dc 0%, #31afd4 45%, #2a9aba 100%)",
+                  borderColor: 'rgba(49, 175, 212, 0.5)',
+                  boxShadow: "0 20px 40px rgba(49, 175, 212, 0.4), inset 0 2px 8px rgba(255, 255, 255, 0.2), inset 0 -2px 8px rgba(0, 0, 0, 0.2)"
+                }}
                 animate={{
                   y: [-2, 2, -2],
                   rotateY: [0, 5, 0, -5, 0]
@@ -53,10 +59,6 @@ export default function ThankYouPage() {
                   duration: 4,
                   repeat: Infinity,
                   ease: "easeInOut"
-                }}
-                style={{
-                  background: "linear-gradient(135deg, #fb923c 0%, #f97316 45%, #ea580c 100%)",
-                  boxShadow: "0 20px 40px rgba(249, 115, 22, 0.4), inset 0 2px 8px rgba(255, 255, 255, 0.2), inset 0 -2px 8px rgba(0, 0, 0, 0.2)"
                 }}
               >
                 {/* Animated Check Icon */}
@@ -76,7 +78,8 @@ export default function ThankYouPage() {
               
               {/* Subtle Ring Animation */}
               <motion.div
-                className="absolute inset-0 border-2 border-orange-300/30 rounded-full"
+                className="absolute inset-0 border-2 rounded-full"
+                style={{borderColor: 'rgba(49, 175, 212, 0.3)'}}
                 animate={{
                   scale: [1, 1.1, 1],
                   opacity: [0.5, 0.8, 0.5]
@@ -96,7 +99,7 @@ export default function ThankYouPage() {
             <h1 className="text-3xl font-black text-white leading-tight md:text-4xl lg:text-5xl">
               Congrats! You're in.
             </h1>
-            <h2 className="text-xl font-black text-orange-500 md:text-2xl lg:text-3xl">
+            <h2 className="text-xl font-black md:text-2xl lg:text-3xl" style={{color: '#31afd4'}}>
               Join the WhatsApp Group for all updates
             </h2>
           </div>
