@@ -96,68 +96,68 @@ function StuckAtCheckbox({ point, index, onToggle }: { point: string; index: num
 
 const testimonials = [
   {
-    quote: "Finally deployed my first AI agent to production! The AWS deployment patterns were crystal clear. My team is now confident shipping agents to real users.",
-    name: "Sarah Chen",
-    role: "Senior Software Engineer | 8 years experience",
-    company: "Tech Startup",
-    image: "https://images.unsplash.com/photo-1581065178047-8ee15951ede6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMGJ1c2luZXNzJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzU4NjE2NTgwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    quote: "He doesn't just lecture; he actively engages, figures out exactly where you're stuck, and then explains concepts with incredible clarity and patience.",
+    name: "Jay Jhaveri",
+    role: "Senior Software Engineer | 9+ Years of Experience",
+    company: "AI Consultant",
+    image: "https://github.com/aishitdharwal/testimonial-images/blob/main/jay.jpeg?raw=true"
   },
   {
-    quote: "No more Jupyter notebook graveyard! This workshop taught me exactly how to bridge the gap from prototype to production-ready AI agents on AWS.",
-    name: "Marcus Rodriguez", 
-    role: "ML Engineer | 6 years experience",
-    company: "FinTech Company",
-    image: "https://images.unsplash.com/photo-1758599543154-76ec1c4257df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBleGVjdXRpdmUlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NTg2Mjc2NjR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    quote: "He cuts through the noise and hype that plague this industry, focusing instead on the fundamental principles that actually matter for business outcomes.",
+    name: "Indy Banerjee", 
+    role: "Partner | 30+ Years of Experience",
+    company: "McKinsey & Company, Inc.",
+    image: "https://github.com/aishitdharwal/testimonial-images/blob/main/indy.jpeg?raw=true"
   },
   {
-    quote: "The two-path approach (LangChain + Bedrock) was genius! I now understand when to use custom deployments vs managed services. Game changer for our architecture decisions.",
-    name: "Dr. Priya Patel",
-    role: "Cloud Architect | 10 years experience",
-    company: "Enterprise SaaS",
-    image: "https://images.unsplash.com/photo-1711182673833-7e11dffa0eec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBpbmRpYW4lMjBidXNpbmVzcyUyMHdvbWFufGVufDF8fHx8MTc1ODYyNzY2N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    quote: "He has a rare ability to break technical topics down to their smallest parts, explaining the why and the how and bringing it all together into a clear mental models that stick.",
+    name: "Ashni Shah",
+    role: "Strategy & Operations | 13+ Years of Experience",
+    company: "Founder",
+    image: "https://github.com/aishitdharwal/testimonial-images/blob/main/ashni.jpeg?raw=true"
   },
   {
-    quote: "Hands-on and practical! Built and deployed a working agent during the session. Finally have a real production project in my portfolio.",
-    name: "Alex Thompson",
-    role: "Data Scientist | 5 years experience",
-    company: "AI Research Lab",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBidXNpbmVzc3xlbnwxfHx8fDE3NTg2Mjc2Njh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    quote: "I witnessed significant growth in my understanding of AI and technology, and my confidence soared. He provided valuable insights into AI concepts and offered expert advice on navigating job prospects in the AI world.",
+    name: "Anas Khan",
+    role: "Technical Business Analyst | 6+ Years of Experience",
+    company: "AI Professional",
+    image: "https://github.com/aishitdharwal/testimonial-images/blob/main/anas.jpeg?raw=true"
   },
   {
-    quote: "AWS deployment felt overwhelming until this workshop. Now I confidently use Lambda, API Gateway, and Bedrock for agent deployments.",
-    name: "Lisa Park",
-    role: "DevOps Engineer | 7 years experience", 
-    company: "Cloud Solutions Inc",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b1a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMGJ1c2luZXNzJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzU4NjI3NjcwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    quote: "His practical insights & industry use case studies make him outstanding in the field. His breadth of knowledge, spanning deep learning algorithms, transformers, large language models, and model validation metrics, is truly impressive.",
+    name: "Dharmender Singh",
+    role: "Chapter Leader | 18+ Years of Experience", 
+    company: "Fidelity Investments",
+    image: "https://github.com/aishitdharwal/testimonial-images/blob/main/dharmender.jpeg?raw=true"
   },
   {
-    quote: "The state management patterns for serverless agents solved my biggest production headache. Invaluable practical knowledge.",
-    name: "David Kumar",
-    role: "Full Stack Developer | 9 years experience",
-    company: "AI Platform",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBidXNpbmVzc3xlbnwxfHx8fDE3NTg2Mjc2NzN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    quote: "I felt much more confident and prepared as I pursued opportunities in AI. He has a genuine passion for the field and a real gift for helping others succeed.",
+    name: "Krina Trivedi",
+    role: "Product Manager | 9+ Years of Experience",
+    company: "University of Ottawa",
+    image: "https://github.com/aishitdharwal/testimonial-images/blob/main/krina.jpeg?raw=true"
   },
   {
-    quote: "Perfect for Product Managers! I finally understand the technical complexity of AI agent deployment. Can now have informed conversations with my engineering team.",
-    name: "Emma Wilson",
-    role: "Technical Product Manager | 6 years experience",
-    company: "Enterprise AI", 
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMGJ1c2luZXNzJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzU4NjI3Njc1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    quote: "His passion for the subject matter is contagious, and he has a natural talent for keeping students engaged while covering technical material.",
+    name: "Subhash Dasyam",
+    role: "Lead Security Architect | 15+ Years of Experience",
+    company: "Emirates NBD", 
+    image: "https://github.com/aishitdharwal/testimonial-images/blob/main/subhash.jpeg?raw=true"
   },
   {
-    quote: "Best investment for my career! The deployment templates alone saved me weeks of trial and error. My agents are now live on AWS.",
-    name: "James Foster",
-    role: "Software Engineer | 4 years experience",
-    company: "Startup",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBidXNpbmVzc3xlbnwxfHx8fDE3NTg2Mjc2Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    quote: "Aishit is an exceptional mentor with deep expertise in AI. He possesses strong conceptual clarity, especially when it comes to the mathematical foundations behind AI and machine learning.",
+    name: "Sithal Sigireddy",
+    role: "Gen AI Architect | 17+ Years of Experience",
+    company: "Oracle",
+    image: "https://github.com/aishitdharwal/testimonial-images/blob/main/sithal.jpeg?raw=true"
   },
-  {
-    quote: "The Bedrock Agents tutorial was phenomenal! Went from zero to enterprise-grade deployment in 2 hours. Immediately applied it at work.",
-    name: "Sophia Martinez",
-    role: "Cloud Engineer | 5 years experience",
-    company: "Consulting Firm",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMGJ1c2luZXNzJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzU4NjI3Njc5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-  }
+  // {
+  //   quote: "I finally understand how to validate my ideas properly. This workshop saved me from building something nobody wanted.",
+  //   name: "Sophia Martinez",
+  //   role: "UX Designer | 5 years experience",
+  //   company: "Adobe",
+  //   image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMGJ1c2luZXNzJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzU4NjI3Njc5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+  // }
 ];
 
 const learningPoints = [
@@ -352,7 +352,7 @@ export default function WebinarLandingPage() {
           {/* Badge */}
           <div className="inline-block">
             <Badge className="bg-gray-800 text-gray-300 font-black px-4 py-2 text-base rounded-full border border-gray-600">
-              FOR Developers, ML Engineers & Cloud Professionals
+              For Developers, ML Engineers & Cloud Professionals
             </Badge>
           </div>
           
@@ -368,7 +368,7 @@ export default function WebinarLandingPage() {
           
           {/* Supporting Text */}
           <p className="text-white/80 text-base sm:text-lg max-w-lg mx-auto leading-relaxed">
-            Turn theoretical knowledge into production-ready skills. Whether your goal is to master LangChain deployment, leverage AWS Bedrock, or build scalable AI infrastructure — this workshop bridges the gap from local prototypes to live, cloud-hosted AI Agents that real users can interact with!
+            Turn theoretical knowledge into production-ready skills. Whether your goal is to master LangChain deployment, leverage AWS Bedrock, or build scalable AI infrastructure - this workshop bridges the gap from local prototypes to live, cloud-hosted AI Agents that real users can interact with!
           </p>
         </div>
       </section>
@@ -394,7 +394,7 @@ export default function WebinarLandingPage() {
               <div className="p-3 bg-gray-900">
                 <p className="text-white text-base font-black mb-1">👋 Meet Your Instructor</p>
                 <p className="text-gray-300 text-base">
-                  "I'll show you exactly how to deploy production-ready AI Agents on AWS using both LangChain and Bedrock. Join me live!"
+                  "I'll show you exactly how to deploy production-ready AI Agents on AWS using Production grade best practices. Join me live!"
                 </p>
               </div>
             </CardContent>
@@ -421,7 +421,7 @@ export default function WebinarLandingPage() {
                 </div>
                 <span className="text-white/70 text-sm font-medium">Date</span>
               </div>
-              <p className="text-white font-black text-lg">7th Dec</p>
+              <p className="text-white font-black text-lg">14th Dec 2025</p>
             </div>
             
             {/* Time Card */}
@@ -486,7 +486,7 @@ export default function WebinarLandingPage() {
                 boxShadow: '0 0 30px rgba(49, 175, 212, 0.5), 0 4px 20px rgba(49, 175, 212, 0.3)'
               }}
             >
-              Register Now @ INR99/- ONLY
+              Register Now @ INR 99/- ONLY
             </Button>
           </div>
         </div>
@@ -708,7 +708,7 @@ export default function WebinarLandingPage() {
                         boxShadow: '0 0 30px rgba(49, 175, 212, 0.5), 0 4px 20px rgba(49, 175, 212, 0.3)'
                       }}
                     >
-                      Register Now @ INR99/- ONLY
+                      Register Now @ INR 99/- ONLY
                     </Button>
                   </div>
                 </div>
@@ -838,7 +838,7 @@ export default function WebinarLandingPage() {
             <div className="flex items-center justify-center gap-6 text-center">
               <div className="flex items-center gap-2 text-gray-300">
                 <Sparkles className="w-4 h-4" />
-                <span className="text-sm font-black">Live Group Q&A Sessions</span>
+                <span className="text-sm font-black">Live Group Q&A Session</span>
                 <Sparkles className="w-4 h-4" />
               </div>
             </div>
@@ -852,7 +852,7 @@ export default function WebinarLandingPage() {
               boxShadow: '0 0 30px rgba(49, 175, 212, 0.5), 0 4px 20px rgba(49, 175, 212, 0.3)'
             }}
           >
-            Register Now @ INR99/- ONLY
+            Register Now @ INR 99/- ONLY
           </Button>
         </div>
       </section>
@@ -885,7 +885,7 @@ export default function WebinarLandingPage() {
                 boxShadow: '0 0 30px rgba(49, 175, 212, 0.5), 0 4px 20px rgba(49, 175, 212, 0.3)'
               }}
             >
-              Register Now @ INR99/- ONLY
+              Register Now @ INR 99/- ONLY
             </Button>
           </div>
           
@@ -936,7 +936,7 @@ export default function WebinarLandingPage() {
                   boxShadow: '0 0 30px rgba(49, 175, 212, 0.5), 0 4px 20px rgba(49, 175, 212, 0.3)'
                 }}
               >
-                Register Now @ INR99/- ONLY
+                Register Now @ INR 99/- ONLY
               </Button>
             </div>
           </div>
@@ -984,7 +984,7 @@ export default function WebinarLandingPage() {
             Ready to Deploy Your First AI Agent?
           </h2>
           <p className="text-gray-300">
-            Join us live on December 7th, 2025 at 6:00 PM IST
+            Join us live on December 14th, 2025 at 6:00 PM IST
           </p>
           
           <div className="space-y-4">
@@ -999,7 +999,7 @@ export default function WebinarLandingPage() {
               </div>
               <div className="flex items-center gap-1">
                 <Video className="w-4 h-4" />
-                <span>Live deployment</span>
+                <span>Live Deployment</span>
               </div>
             </div>
           </div>
@@ -1061,7 +1061,7 @@ export default function WebinarLandingPage() {
                 boxShadow: '0 0 20px rgba(49, 175, 212, 0.4)'
               }}
             >
-              Register Now @ INR99 ONLY
+              Register Now @ INR 99 ONLY
             </Button>
           </div>
         </div>
