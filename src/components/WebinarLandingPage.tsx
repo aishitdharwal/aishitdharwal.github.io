@@ -1068,7 +1068,7 @@ export default function WebinarLandingPage() {
       </div>
 
       {/* Footer */}
-      <footer className="px-4 py-8 pb-20 border-t border-gray-800" style={{ backgroundColor: '#050505' }}>
+      <footer className="px-4 py-8 pb-20 border-t border-gray-800" style={{ backgroundColor: '#050505', marginBottom: '45px' }}>
         <div className="max-w-lg mx-auto space-y-4">
           {/* Copyright */}
           <div className="text-center">
