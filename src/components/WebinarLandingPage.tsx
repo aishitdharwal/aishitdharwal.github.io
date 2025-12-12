@@ -289,16 +289,34 @@ export default function WebinarLandingPage() {
 
   useEffect(() => {
     // Countdown timer with days, hours, minutes, seconds
+    const targetDate = new Date("2025-12-14T18:00:00+05:30").getTime();
+    
     const updateCountdown = () => {
-      const now = new Date();
-      const seconds = now.getSeconds();
+      // const now = new Date();
+      // const seconds = now.getSeconds();
       
-      setTimeLeft({
-        days: 8,
-        hours: 16,
-        minutes: 34,
-        seconds: 59 - seconds
-      });
+      // setTimeLeft({
+      //   days: 8,
+      //   hours: 16,
+      //   minutes: 34,
+      //   seconds: 59 - seconds
+      // });
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+
+      if (difference > 0) {
+        // 2. Calculate time units
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        setTimeLeft({ days, hours, minutes, seconds });
+      } else {
+        // 3. Stop the timer if the date has passed
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        clearInterval(timer);
+      }
     };
 
     updateCountdown();
@@ -353,20 +371,26 @@ export default function WebinarLandingPage() {
           {/* Badge */}
           <div className="inline-block">
             <Badge className="bg-gray-800 text-gray-300 font-black px-4 py-2 text-base rounded-full border border-gray-600">
-              For Developers, ML Engineers & Cloud Professionals
+              BREAK INTO THE TOP 5% OF AI ENGINEERS WORLDWIDE
             </Badge>
           </div>
           
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
-            Hands On. Zero Fluff. {' '}
-            <span style={{ color: '#31afd4' }}>Deploy Your AI Agent on AWS</span>{' '}
-            in 90 Minutes.
+            Master Deploying Scalable, {' '}
+            {/* Hands On. Zero Fluff. {' '} */}
+            <span style={{ color: '#31afd4' }}>Production-Ready</span>{' '}
+            AI Agents on AWS
+            {/* in 90 Minutes. */}
           </h1>
           
           {/* Supporting Text */}
           <p className="text-white/80 text-base sm:text-lg max-w-lg mx-auto leading-relaxed">
-          Master the step that truly counts. Deploy an AI Agent to AWS and make it usable in the real world.
+          {/* Master the step that truly counts. Deploy an AI Agent to AWS and make it usable in the real world. */}
+          Everyone says "Build projects." But no one teaches you how to deploy them.
+            You have the skills, but it feels overwhelming. You are not alone.
+            We'll help you overcome self-doubt, face your fears, and become job-ready.
+            This is how you break into the top 5% of AI engineers.
           </p>
         </div>
       </section>

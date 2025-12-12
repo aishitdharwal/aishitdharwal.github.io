@@ -97,16 +97,18 @@ export default function ThankYouPage() {
           {/* Main Headline */}
           <div className="space-y-4 md:space-y-6">
             <h1 className="text-3xl font-black text-white leading-tight md:text-4xl lg:text-5xl">
-              Congrats! You're in.
+              {/* Congrats! You're in. */}
+              You're In. But You Still Need to Join the <span style={{ color: '#31afd4' }}>WhatsApp Group.</span>
             </h1>
             <h2 className="text-xl font-black md:text-2xl lg:text-3xl" style={{color: '#31afd4'}}>
-              Join the WhatsApp Group for all updates
+              {/* Join the WhatsApp Group for all updates */}
             </h2>
           </div>
           
           {/* Supporting Text */}
           <p className="text-gray-300 text-lg leading-relaxed px-2 md:text-xl md:px-4 lg:text-2xl lg:leading-relaxed">
-            You're all set for the webinar! Join the WhatsApp group to get reminders, updates, and webinar link. See you there!
+            {/* You're all set for the webinar! Join the WhatsApp group to get reminders, updates, and webinar link. See you there! */}
+            Didn’t mean to yell that at you… but that’s where you’ll get the webinar link, reminders, and all juicy updates. Of course :-)
           </p>
 
           {/* WhatsApp CTA Button */}
