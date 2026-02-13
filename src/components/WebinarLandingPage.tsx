@@ -289,7 +289,7 @@ export default function WebinarLandingPage() {
 
   useEffect(() => {
     // Countdown timer with days, hours, minutes, seconds
-    const targetDate = new Date("2025-12-14T18:00:00+05:30").getTime();
+    const targetDate = new Date("2026-02-29T18:00:00+05:30").getTime();
     
     const updateCountdown = () => {
       // const now = new Date();
