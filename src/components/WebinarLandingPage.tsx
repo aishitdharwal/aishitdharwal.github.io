@@ -289,8 +289,9 @@ export default function WebinarLandingPage() {
 
   useEffect(() => {
     // Countdown timer with days, hours, minutes, seconds
-    const targetDate = new Date("2026-02-29T18:00:00+05:30").getTime();
-    
+    const targetDate = new Date("2026-11-15T11:00:00+05:30").getTime();
+    let timer: ReturnType<typeof setInterval> | undefined;
+
     const updateCountdown = () => {
       // const now = new Date();
       // const seconds = now.getSeconds();
@@ -315,12 +316,12 @@ export default function WebinarLandingPage() {
       } else {
         // 3. Stop the timer if the date has passed
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        clearInterval(timer);
+        if (timer) clearInterval(timer);
       }
     };
 
     updateCountdown();
-    const timer = setInterval(updateCountdown, 1000);
+    timer = setInterval(updateCountdown, 1000);
 
     return () => clearInterval(timer);
   }, []);
