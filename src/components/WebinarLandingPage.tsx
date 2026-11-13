@@ -507,7 +507,7 @@ export default function WebinarLandingPage() {
           
           {/* CTA Button */}
           <div className="pt-2">
-          <a href="https://rzp.io/rzp/PeYihNh">
+          <a href="https://rzp.io/rzp/p2gnu1RX">
             <Button 
               size="lg" 
               className="w-full text-white font-black text-xl py-4 rounded-2xl border-0"
@@ -726,7 +726,7 @@ export default function WebinarLandingPage() {
                   </p>
                   
                   <div>
-                  <a href="https://rzp.io/rzp/PeYihNh">
+                  <a href="https://rzp.io/rzp/p2gnu1RX">
                     <Button 
                       size="lg" 
                       className="text-white font-black px-10 py-3 text-xl rounded-xl transition-all duration-300 transform hover:scale-105"
@@ -872,7 +872,7 @@ export default function WebinarLandingPage() {
             </div>
           </div>
           
-          <a href="https://rzp.io/rzp/PeYihNh">
+          <a href="https://rzp.io/rzp/p2gnu1RX">
           <Button 
             size="lg" 
             className="w-full text-white font-black text-xl"
@@ -913,7 +913,7 @@ export default function WebinarLandingPage() {
             
             {/* CTA under countdown */}
             <div className="pt-4">
-            <a href="https://rzp.io/rzp/PeYihNh">
+            <a href="https://rzp.io/rzp/p2gnu1RX">
               <Button 
                 size="lg" 
                 className="w-full text-white font-black text-xl py-4 rounded-2xl transition-all duration-300 transform hover:scale-105"
@@ -1040,7 +1040,7 @@ export default function WebinarLandingPage() {
               <Clock className="w-4 h-4 animate-pulse" style={{ color: '#31afd4' }} />
               <span>Hurry! only <span className="underline animate-pulse">{seatsLeft}</span> seats left</span>
             </div>
-            <a href="https://rzp.io/rzp/PeYihNh">
+            <a href="https://rzp.io/rzp/p2gnu1RX">
             <Button 
               size="sm" 
               className="text-white font-black px-4 py-2 text-sm"
