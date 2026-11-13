@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 export default function ThankYouPage() {
   const handleJoinWhatsApp = () => {
-    window.open('https://chat.whatsapp.com/JoHN1i6BTTa1Tm0Fuu59nZ', '_blank');
+    window.open('https://chat.whatsapp.com/FA8BRJBUPs92TLHoNZnGCC', '_blank');
   };
 
   return (
