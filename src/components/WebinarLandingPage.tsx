@@ -383,7 +383,7 @@ export default function WebinarLandingPage() {
           {/* Badge */}
           <div className="inline-block">
             <Badge className="bg-gray-800 text-gray-300 font-black px-4 py-2 text-base rounded-full border border-gray-600 whitespace-normal text-center leading-snug">
-              THE NEXT WAVE OF ENGINEERS WON'T JUST WRITE CODE
+              AI CODE VERIFICATION MASTERCLASS
             </Badge>
           </div>
           
