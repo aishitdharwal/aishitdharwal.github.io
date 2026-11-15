@@ -1062,7 +1062,7 @@ export default function WebinarLandingPage() {
           {/* Copyright */}
           <div className="text-center">
             <p className="text-gray-400 text-sm">
-              © 2025 Aishit Dharwal. All rights reserved
+              © 2026 Kapaso Technologies LLP. All rights reserved.
             </p>
           </div>
           

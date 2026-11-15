@@ -22,19 +22,19 @@ export default function PrivacyPolicy() {
         <div className="space-y-8">
           <div>
             <h1 className="text-4xl font-black text-white mb-4">Privacy Policy</h1>
-            <p className="text-gray-400">Last updated: November 26, 2025</p>
+            <p className="text-gray-400">Last updated: November 15, 2026</p>
           </div>
 
           <div className="space-y-6 text-gray-300">
             <section className="space-y-4">
               <p>
-                This Privacy Policy sets out the privacy practices for all services operated and provided directly by Aishit Dharwal, an individual sole owner conducting workshops, consultations and online learning through video conferencing solutions and digital materials.
+                This Privacy Policy sets out the privacy practices for all services operated and provided directly by Kapaso Technologies LLP, a limited liability partnership conducting workshops, consultations and online learning through video conferencing solutions and digital materials.
               </p>
               <p>
                 This document is published in accordance with the Information Technology Act 2000, the Reasonable Security Practices and Procedures and Sensitive Personal Data or Information Rules 2011, and the Digital Personal Data Protection Act 2023.
               </p>
               <p className="font-black text-white">
-                Use of any services or content provided by Aishit Dharwal signifies that you agree to this Privacy Policy.
+                Use of any services or content provided by Kapaso Technologies LLP signifies that you agree to this Privacy Policy.
               </p>
             </section>
 
@@ -42,7 +42,7 @@ export default function PrivacyPolicy() {
               <h2 className="text-2xl font-black text-white">Introduction</h2>
               <p>For the purposes of this Privacy Policy:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>The words <span className="font-black text-white">us</span>, <span className="font-black text-white">we</span>, and <span className="font-black text-white">our</span> refer to Aishit Dharwal</li>
+                <li>The words <span className="font-black text-white">us</span>, <span className="font-black text-white">we</span>, and <span className="font-black text-white">our</span> refer to Kapaso Technologies LLP</li>
                 <li>The words <span className="font-black text-white">you</span> or <span className="font-black text-white">user</span> refer to any individual accessing or using our services</li>
                 <li>Anyone below eighteen years of age is considered a <span className="font-black text-white">Child</span> and requires parental consent</li>
               </ul>
@@ -91,7 +91,7 @@ export default function PrivacyPolicy() {
             <section className="space-y-4">
               <h2 className="text-2xl font-black text-white">Intellectual Property Protection and Prohibited Use</h2>
               <p>
-                All workshop content, course material, recordings, assignments, solutions, templates, discussions, peer interactions, WhatsApp group content and any other resources provided in any form are the exclusive intellectual property of Aishit Dharwal.
+                All workshop content, course material, recordings, assignments, solutions, templates, discussions, peer interactions, WhatsApp group content and any other resources provided in any form are the exclusive intellectual property of Kapaso Technologies LLP.
               </p>
               <p className="font-black text-white">You strictly agree to the following:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
@@ -177,8 +177,8 @@ export default function PrivacyPolicy() {
               </p>
               <div className="bg-gray-900 border border-gray-800 rounded-lg p-4 mt-4">
                 <p className="font-black text-white">Grievance Officer</p>
-                <p className="text-sm text-gray-400 mt-2">Name: Aishit Dharwal</p>
-                <p className="text-sm text-gray-400">Email: aishit.dharwal@figuringoutaishit.com</p>
+                <p className="text-sm text-gray-400 mt-2">Name: Shreya Khot</p>
+                <p className="text-sm text-gray-400">Email: shreya.khot@kapasotechnologies.com</p>
                 <p className="text-sm text-gray-400 mt-2">We will make reasonable efforts to respond promptly.</p>
               </div>
             </section>
@@ -199,7 +199,7 @@ export default function PrivacyPolicy() {
         <div className="max-w-4xl mx-auto space-y-6">
           <div className="text-center">
             <p className="text-gray-400 text-sm">
-              © 2025 Aishit Dharwal. All rights reserved
+              © 2026 Kapaso Technologies LLP. All rights reserved.
             </p>
           </div>
           

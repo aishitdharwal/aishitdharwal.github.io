@@ -22,13 +22,13 @@ export default function RefundPolicy() {
         <div className="space-y-8">
           <div>
             <h1 className="text-4xl font-black text-white mb-4">Refund Policy</h1>
-            <p className="text-gray-400">Last updated: November 26, 2025</p>
+            <p className="text-gray-400">Last updated: November 15, 2026</p>
           </div>
 
           <div className="space-y-6 text-gray-300">
             <section className="space-y-4">
               <p>
-                Thank you for choosing to learn with Aishit Dharwal. This Refund Policy explains the terms that apply when you purchase access to any workshop or program offered by me as an independent consultant.
+                Thank you for choosing to learn with Kapaso Technologies LLP. This Refund Policy explains the terms that apply when you purchase access to any workshop or program offered by Kapaso Technologies LLP.
               </p>
             </section>
 
@@ -41,7 +41,7 @@ export default function RefundPolicy() {
 
             <section className="space-y-4">
               <h2 className="text-2xl font-black text-white">How to Request a Refund</h2>
-              <p>To request a refund, you must send an email to <span className="text-white font-black">aishit.dharwal@figuringoutaishit.com</span> with the following details:</p>
+              <p>To request a refund, you must send an email to <span className="text-white font-black">contact@kapasotechnologies.com</span> with the following details:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>Your full name</li>
                 <li>Your registered email used during purchase</li>
@@ -90,7 +90,7 @@ export default function RefundPolicy() {
             <section className="space-y-4">
               <h2 className="text-2xl font-black text-white">Acceptance of This Policy</h2>
               <p>
-                By purchasing any workshop or program offered by Aishit Dharwal, you acknowledge that you have read and understood this Refund Policy and agree to follow it.
+                By purchasing any workshop or program offered by Kapaso Technologies LLP, you acknowledge that you have read and understood this Refund Policy and agree to follow it.
               </p>
             </section>
           </div>
@@ -102,7 +102,7 @@ export default function RefundPolicy() {
         <div className="max-w-4xl mx-auto space-y-6">
           <div className="text-center">
             <p className="text-gray-400 text-sm">
-              © 2025 Aishit Dharwal. All rights reserved
+              © 2026 Kapaso Technologies LLP. All rights reserved.
             </p>
           </div>
           

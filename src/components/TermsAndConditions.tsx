@@ -22,19 +22,19 @@ export default function TermsAndConditions() {
         <div className="space-y-8">
           <div>
             <h1 className="text-4xl font-black text-white mb-4">Terms and Conditions</h1>
-            <p className="text-gray-400">Last updated: November 26, 2025</p>
+            <p className="text-gray-400">Last updated: November 15, 2026</p>
           </div>
 
           <div className="space-y-6 text-gray-300">
             <section className="space-y-4">
               <p>
-                These Terms and Conditions govern the use of all workshops, consultations, online sessions, digital materials, and related services operated by Aishit Dharwal under the trade name <span className="font-black text-white">AI Classroom</span>.
+                These Terms and Conditions govern the use of all workshops, consultations, online sessions, digital materials, and related services operated by Kapaso Technologies LLP under the trade name <span className="font-black text-white">Diztilleri</span>.
               </p>
               <p>
-                AI Classroom is a trade name used to represent the educational services offered by Aishit Dharwal. AI Classroom is not a registered company or incorporated entity. All ownership rights, intellectual property rights and operational responsibilities for AI Classroom are solely held by Aishit Dharwal. All payments, communications, commitments and obligations under these Terms and Conditions are between the user and Aishit Dharwal.
+                Diztilleri is a trade name used to represent the educational services offered by Kapaso Technologies LLP. Diztilleri is not a separate company or incorporated entity. All ownership rights, intellectual property rights and operational responsibilities for Diztilleri are solely held by Kapaso Technologies LLP. All payments, communications, commitments and obligations under these Terms and Conditions are between the user and Kapaso Technologies LLP.
               </p>
               <p>
-                By accessing or using any services provided by Aishit Dharwal, you agree to be bound by these Terms and Conditions. If you do not agree, you must discontinue use of the services.
+                By accessing or using any services provided by Kapaso Technologies LLP, you agree to be bound by these Terms and Conditions. If you do not agree, you must discontinue use of the services.
               </p>
             </section>
 
@@ -42,7 +42,7 @@ export default function TermsAndConditions() {
               <h2 className="text-2xl font-black text-white">Definitions</h2>
               <p>For the purpose of these Terms and Conditions:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>The words <span className="font-black text-white">we</span>, <span className="font-black text-white">us</span>, and <span className="font-black text-white">our</span> refer to Aishit Dharwal.</li>
+                <li>The words <span className="font-black text-white">we</span>, <span className="font-black text-white">us</span>, and <span className="font-black text-white">our</span> refer to Kapaso Technologies LLP.</li>
                 <li>The words <span className="font-black text-white">you</span> or <span className="font-black text-white">user</span> refer to any individual accessing or using the services.</li>
                 <li>Anyone below eighteen years of age is considered a <span className="font-black text-white">Child</span> and requires parental consent.</li>
               </ul>
@@ -74,7 +74,7 @@ export default function TermsAndConditions() {
             <section className="space-y-4">
               <h2 className="text-2xl font-black text-white">Intellectual Property and Prohibited Use</h2>
               <p>
-                All content and materials provided under AI Classroom are the exclusive intellectual property of Aishit Dharwal. This includes but is not limited to:
+                All content and materials provided under Diztilleri are the exclusive intellectual property of Kapaso Technologies LLP. This includes but is not limited to:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>Session recordings</li>
@@ -116,7 +116,7 @@ export default function TermsAndConditions() {
             <section className="space-y-4">
               <h2 className="text-2xl font-black text-white">Refunds</h2>
               <p>
-                Refunds are governed by the Refund Policy published by Aishit Dharwal. By accepting these Terms and Conditions, you also acknowledge and accept the Refund Policy.
+                Refunds are governed by the Refund Policy published by Kapaso Technologies LLP. By accepting these Terms and Conditions, you also acknowledge and accept the Refund Policy.
               </p>
               <p>
                 Refund requests made after the forty eight hour window are not eligible for any kind of refund.
@@ -145,24 +145,24 @@ export default function TermsAndConditions() {
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>The user will be removed from all associated groups or communication channels</li>
-                <li>The user will be barred from registering for any future workshops, cohorts or services offered under the trade name AI Classroom</li>
-                <li>The user will be blacklisted indefinitely at the personal discretion of Aishit Dharwal if their actions are considered disruptive, harmful or carried out with malicious intent</li>
+                <li>The user will be barred from registering for any future workshops, cohorts or services offered under the trade name Diztilleri</li>
+                <li>The user will be blacklisted indefinitely at the sole discretion of Kapaso Technologies LLP if their actions are considered disruptive, harmful or carried out with malicious intent</li>
                 <li>Such removal is final and the user is not entitled to any refund even within the forty eight hour refund period mentioned in the Refund Policy due to breach of conduct</li>
               </ul>
               <p className="mt-4">
-                If any user publishes online posts or content that disrespects, defames or uses foul language towards the services offered by Aishit Dharwal or towards Aishit Dharwal personally whether directly or indirectly or makes statements that negatively affect the experience of the workshop or the associated business outcome:
+                If any user publishes online posts or content that disrespects, defames or uses foul language towards the services offered by Kapaso Technologies LLP or towards Kapaso Technologies LLP or any of its team members personally whether directly or indirectly or makes statements that negatively affect the experience of the workshop or the associated business outcome:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>We reserve the right to take appropriate legal action under applicable laws</li>
                 <li>We reserve the right to immediately remove the user from all current sessions and communication channels</li>
-                <li>We reserve the right to permanently deny the user access to all future workshops, cohorts or services offered under the trade name AI Classroom</li>
+                <li>We reserve the right to permanently deny the user access to all future workshops, cohorts or services offered under the trade name Diztilleri</li>
                 <li>The user is not entitled to any refund under any circumstance including within the forty eight hour refund period if such behaviour occurs</li>
               </ul>
               <p className="mt-4">
                 This includes behaviour during live sessions that disrupts, mocks, humiliates or intentionally interferes with the learning environment or the professional operations of the workshop. Any act that undermines the integrity, experience or outcome of the session for other participants will be treated as a violation of the Code of Conduct.
               </p>
               <p className="mt-4 font-black text-white">
-                By registering for any workshop or service provided by Aishit Dharwal, the user confirms that they have read, understood and agreed to follow all conditions stated in this Code of Conduct without exception.
+                By registering for any workshop or service provided by Kapaso Technologies LLP, the user confirms that they have read, understood and agreed to follow all conditions stated in this Code of Conduct without exception.
               </p>
             </section>
 
@@ -171,7 +171,7 @@ export default function TermsAndConditions() {
               <p>
                 All services are educational in nature and are not guaranteed to produce specific results or outcomes.
               </p>
-              <p>Aishit Dharwal is not liable for:</p>
+              <p>Kapaso Technologies LLP is not liable for:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>Loss of data</li>
                 <li>Technical failure of platforms such as Zoom or WhatsApp</li>
@@ -187,7 +187,7 @@ export default function TermsAndConditions() {
             <section className="space-y-4">
               <h2 className="text-2xl font-black text-white">Privacy and Data Use</h2>
               <p>
-                All data collection, storage and usage follows the Privacy Policy published by Aishit Dharwal.
+                All data collection, storage and usage follows the Privacy Policy published by Kapaso Technologies LLP.
               </p>
               <p>
                 By using the services, you consent to the collection and processing of your information as described in the Privacy Policy.
@@ -246,8 +246,10 @@ export default function TermsAndConditions() {
               </p>
               <div className="bg-gray-900 border border-gray-800 rounded-lg p-4 mt-4">
                 <p className="font-black text-white">Contact Information</p>
-                <p className="text-sm text-gray-400 mt-2">Name: Aishit Dharwal</p>
-                <p className="text-sm text-gray-400">Email: aishit.dharwal@figuringoutaishit.com</p>
+                <p className="text-sm text-gray-400 mt-2">Email: contact@kapasotechnologies.com</p>
+                <p className="font-black text-white mt-4">Grievance Officer</p>
+                <p className="text-sm text-gray-400 mt-2">Name: Shreya Khot</p>
+                <p className="text-sm text-gray-400">Email: shreya.khot@kapasotechnologies.com</p>
                 <p className="text-sm text-gray-400 mt-2">We will make reasonable efforts to respond promptly.</p>
               </div>
             </section>
@@ -269,7 +271,7 @@ export default function TermsAndConditions() {
         <div className="max-w-4xl mx-auto space-y-6">
           <div className="text-center">
             <p className="text-gray-400 text-sm">
-              © 2025 Aishit Dharwal. All rights reserved
+              © 2026 Kapaso Technologies LLP. All rights reserved.
             </p>
           </div>
           
