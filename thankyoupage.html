@@ -16,7 +16,9 @@
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '1610199436629763');
-        fbq('track', 'Purchase', {value: 199, currency: 'INR'});
+        // Purchase disabled: Razorpay's own pixel integration now reports payment events.
+        // Re-enable if Razorpay events don't reach Meta (add a paid-status/once-per-payment guard first).
+        // fbq('track', 'Purchase', {value: 199, currency: 'INR'});
         </script>
         
         <!-- End Meta Pixel Code -->
